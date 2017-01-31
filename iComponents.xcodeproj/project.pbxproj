@@ -11,6 +11,7 @@
 		8C61DD8E1E260590007BCB2D /* iComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */; };
 		8C61DD901E260590007BCB2D /* iComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C61DD821E26058F007BCB2D /* iComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD9F1E260CD2007BCB2D /* iCache.swift */; };
+		D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D2461E40B1E800D1371B /* iReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iComponentsTests.swift; sourceTree = "<group>"; };
 		8C61DD8F1E260590007BCB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C61DD9F1E260CD2007BCB2D /* iCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCache.swift; sourceTree = "<group>"; };
+		D0F9D2461E40B1E800D1371B /* iReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				8C61DD811E26058F007BCB2D /* iComponents */,
 				8C61DD8C1E260590007BCB2D /* iComponentsTests */,
 				8C61DD801E26058F007BCB2D /* Products */,
+				D0F9D27A1E40B94000D1371B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +79,7 @@
 				8C61DD821E26058F007BCB2D /* iComponents.h */,
 				8C61DD831E26058F007BCB2D /* Info.plist */,
 				8C61DD9F1E260CD2007BCB2D /* iCache.swift */,
+				D0F9D2461E40B1E800D1371B /* iReachability.swift */,
 			);
 			path = iComponents;
 			sourceTree = "<group>";
@@ -87,6 +91,13 @@
 				8C61DD8F1E260590007BCB2D /* Info.plist */,
 			);
 			path = iComponentsTests;
+			sourceTree = "<group>";
+		};
+		D0F9D27A1E40B94000D1371B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */,
 				8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
