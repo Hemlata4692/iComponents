@@ -19,21 +19,18 @@ public enum ReachabilityError: Error {
 public let ReachabilityChangedNotification = NSNotification.Name("ReachabilityChangedNotification")
 
 
-public var reachInstance:Reachability! {
-
-get {
-    guard reachInstance == nil else {
-        reachInstance = Reachability.init(hostname: "www.google.com")
+var reachInstance:Reachability! {
+    get {
+        guard reachInstance != nil else {
+            reachInstance = Reachability.init(hostname: "www.google.com")
+            return reachInstance
+        }
         return reachInstance
     }
-    return reachInstance
-}
 
-set {
-    reachInstance = Reachability.init(hostname: "www.google.com")
-}
-
-
+    set {
+        reachInstance = Reachability.init(hostname: "www.google.com")
+    }
 }
 
 func callback(reachability:SCNetworkReachability, flags: SCNetworkReachabilityFlags, info: UnsafeMutableRawPointer?) {
