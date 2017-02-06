@@ -35,7 +35,6 @@ class ImageLoader {
             }
             let url = URL(string: urlString)
             
-            
             let downloadTask: URLSessionDataTask = URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
                 if (error != nil) {
                     completionHandler(nil, urlString)
@@ -48,15 +47,11 @@ class ImageLoader {
                     DispatchQueue.main.async {
                         completionHandler(image, urlString)
                     }
-                    
                     return
                 }
-                
             })
             downloadTask.resume()
-            
         }
-        
     }
     
     class func imageForUrl(urlString: String,withPath filePath:String, completionHandler:@escaping (_ image: UIImage?, _ url: String) -> ()) {
@@ -106,11 +101,8 @@ class ImageLoader {
                 }
             })
             downloadTask.resume()
-            
         }
-        
     }
-    
 }
 extension FileManager {
     class public func documentsDir() -> String {
@@ -131,7 +123,6 @@ extension UIImageView {
                 self.image = image
             }
         }
-        
     }
     
     public func SetImageUsingCacheWithURLString(urlStr: String , withPlaceholderImage placeholderImage:UIImage) {
@@ -143,7 +134,6 @@ extension UIImageView {
                 }
             }
         }
-        
     }
     
     public func SetImageUsingCacheDirectoryWithURLString(urlStr: String) {
@@ -154,7 +144,6 @@ extension UIImageView {
                 self.image = image
             }
         }
-        
     }
     
     public func SetImageUsingCacheDirectoryWithURLString(urlStr: String, withPlaceholderImage placeholderImage:UIImage) {
@@ -178,7 +167,6 @@ extension UIImageView {
                 self.image = image
             }
         }
-        
     }
     
     public func SetImageUsingDirectoryWithURLString(urlStr: String, withPlaceholderImage placeholderImage:UIImage) {
@@ -192,7 +180,6 @@ extension UIImageView {
                 }
             }
         }
-        
     }
     
 }
