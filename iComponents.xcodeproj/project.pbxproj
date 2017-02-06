@@ -6,11 +6,32 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		8C79A6F01E48813E00907D21 /* Distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8C79A6F11E48813F00907D21 /* Build configuration list for PBXAggregateTarget "Distribution" */;
+			buildPhases = (
+				8C79A6F41E48816500907D21 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Distribution;
+			productName = Distribution;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8C61DD891E260590007BCB2D /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C61DD8E1E260590007BCB2D /* iComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */; };
 		8C61DD901E260590007BCB2D /* iComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C61DD821E26058F007BCB2D /* iComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD9F1E260CD2007BCB2D /* iCache.swift */; };
+		8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A6FE1E48851B00907D21 /* AppDelegate.swift */; };
+		8C79A7011E48851B00907D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A7001E48851B00907D21 /* ViewController.swift */; };
+		8C79A7041E48851B00907D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7021E48851B00907D21 /* Main.storyboard */; };
+		8C79A7061E48851B00907D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7051E48851B00907D21 /* Assets.xcassets */; };
+		8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */; };
+		8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
+		8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,7 +42,28 @@
 			remoteGlobalIDString = 8C61DD7E1E26058F007BCB2D;
 			remoteInfo = iComponents;
 		};
+		8C79A7101E48852300907D21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C61DD761E26058F007BCB2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C61DD7E1E26058F007BCB2D;
+			remoteInfo = iComponents;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C79A7121E48852300907D21 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8C61DD7F1E26058F007BCB2D /* iComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +73,13 @@
 		8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iComponentsTests.swift; sourceTree = "<group>"; };
 		8C61DD8F1E260590007BCB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C61DD9F1E260CD2007BCB2D /* iCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCache.swift; sourceTree = "<group>"; };
+		8C79A6FC1E48851B00907D21 /* iComponent-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iComponent-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C79A6FE1E48851B00907D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C79A7001E48851B00907D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C79A7031E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C79A7051E48851B00907D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C79A7081E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C79A70A1E48851B00907D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +98,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C79A6F91E48851B00907D21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +114,7 @@
 			children = (
 				8C61DD811E26058F007BCB2D /* iComponents */,
 				8C61DD8C1E260590007BCB2D /* iComponentsTests */,
+				8C79A6FD1E48851B00907D21 /* iComponent-Demo */,
 				8C61DD801E26058F007BCB2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +124,7 @@
 			children = (
 				8C61DD7F1E26058F007BCB2D /* iComponents.framework */,
 				8C61DD881E260590007BCB2D /* iComponentsTests.xctest */,
+				8C79A6FC1E48851B00907D21 /* iComponent-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +146,19 @@
 				8C61DD8F1E260590007BCB2D /* Info.plist */,
 			);
 			path = iComponentsTests;
+			sourceTree = "<group>";
+		};
+		8C79A6FD1E48851B00907D21 /* iComponent-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				8C79A6FE1E48851B00907D21 /* AppDelegate.swift */,
+				8C79A7001E48851B00907D21 /* ViewController.swift */,
+				8C79A7021E48851B00907D21 /* Main.storyboard */,
+				8C79A7051E48851B00907D21 /* Assets.xcassets */,
+				8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */,
+				8C79A70A1E48851B00907D21 /* Info.plist */,
+			);
+			path = "iComponent-Demo";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +211,25 @@
 			productReference = 8C61DD881E260590007BCB2D /* iComponentsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8C79A6FB1E48851B00907D21 /* iComponent-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C79A70B1E48851B00907D21 /* Build configuration list for PBXNativeTarget "iComponent-Demo" */;
+			buildPhases = (
+				8C79A6F81E48851B00907D21 /* Sources */,
+				8C79A6F91E48851B00907D21 /* Frameworks */,
+				8C79A6FA1E48851B00907D21 /* Resources */,
+				8C79A7121E48852300907D21 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C79A7111E48852300907D21 /* PBXTargetDependency */,
+			);
+			name = "iComponent-Demo";
+			productName = "iComponent-Demo";
+			productReference = 8C79A6FC1E48851B00907D21 /* iComponent-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,6 +249,14 @@
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
 					};
+					8C79A6F01E48813E00907D21 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					8C79A6FB1E48851B00907D21 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 8C61DD791E26058F007BCB2D /* Build configuration list for PBXProject "iComponents" */;
@@ -166,6 +265,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8C61DD751E26058F007BCB2D;
 			productRefGroup = 8C61DD801E26058F007BCB2D /* Products */;
@@ -174,6 +274,8 @@
 			targets = (
 				8C61DD7E1E26058F007BCB2D /* iComponents */,
 				8C61DD871E260590007BCB2D /* iComponentsTests */,
+				8C79A6F01E48813E00907D21 /* Distribution */,
+				8C79A6FB1E48851B00907D21 /* iComponent-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -193,7 +295,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C79A6FA1E48851B00907D21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */,
+				8C79A7061E48851B00907D21 /* Assets.xcassets in Resources */,
+				8C79A7041E48851B00907D21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C79A6F41E48816500907D21 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Merge Script\n\n\n\n# 1\n\n# Set bash script to exit immediately if any commands fail.\n\nset -e\n\n\n\n# 2\n\n# Setup some constants for use later on.\n\nFRAMEWORK_NAME=\"iComponents\"\n\n\n\n# 3\n\n# If remnants from a previous build exist, delete them.\n\nif [ -d \"${SRCROOT}/build\" ]; then\n\nrm -rf \"${SRCROOT}/build\"\n\nfi\n\n\n\n# 4\n\n# Build the framework for device and for simulator (using\n\n# all needed architectures).\n\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk \"iphoneos\"\n\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n\n\n# 5\n\n# Remove .framework file if exists on Desktop from previous run.\n\nif [ -d \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\" ]; then\n\nrm -rf \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\nfi\n\n\n\n# 6\n\n# Copy the device version of framework to Desktop.\n\ncp -r \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\n\n\n# 7\n\n# Replace the framework executable within the framework with\n\n# a new version created by merging the device and simulator\n\n# frameworks' executables with lipo.\n\nlipo -create -output \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n\n\n# 8\n\n# Copy the Swift module mappings for the simulator into the\n\n# framework.  The device mappings already exist from step 6.\n\ncp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n\n\n# 9\n\n# Delete the most recent build.\n\nif [ -d \"${SRCROOT}/build\" ]; then\n\nrm -rf \"${SRCROOT}/build\"\n\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C61DD7A1E26058F007BCB2D /* Sources */ = {
@@ -212,6 +340,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C79A6F81E48851B00907D21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C79A7011E48851B00907D21 /* ViewController.swift in Sources */,
+				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -220,7 +357,31 @@
 			target = 8C61DD7E1E26058F007BCB2D /* iComponents */;
 			targetProxy = 8C61DD8A1E260590007BCB2D /* PBXContainerItemProxy */;
 		};
+		8C79A7111E48852300907D21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C61DD7E1E26058F007BCB2D /* iComponents */;
+			targetProxy = 8C79A7101E48852300907D21 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C79A7021E48851B00907D21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C79A7031E48851B00907D21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C79A7081E48851B00907D21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8C61DD911E260590007BCB2D /* Debug */ = {
@@ -264,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -311,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -326,7 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -337,6 +498,7 @@
 				);
 				INFOPLIST_FILE = iComponents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.iComponents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,7 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -361,6 +523,7 @@
 				);
 				INFOPLIST_FILE = iComponents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.iComponents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,6 +551,53 @@
 				INFOPLIST_FILE = iComponentsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.iComponentsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8C79A6F21E48813F00907D21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8C79A6F31E48813F00907D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8C79A70C1E48851B00907D21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ranosys.iComponent-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8C79A70D1E48851B00907D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ranosys.iComponent-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -422,6 +632,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8C79A6F11E48813F00907D21 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C79A6F21E48813F00907D21 /* Debug */,
+				8C79A6F31E48813F00907D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8C79A70B1E48851B00907D21 /* Build configuration list for PBXNativeTarget "iComponent-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C79A70C1E48851B00907D21 /* Debug */,
+				8C79A70D1E48851B00907D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
