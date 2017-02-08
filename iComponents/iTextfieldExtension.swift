@@ -16,7 +16,7 @@ let kFloatingLabelAnimationDuration = 0.3
 let kDefaultFloatingLabelTextColor = UIColor.gray
 let kDefaultFloatingLabelPadding:CGFloat = 0.0
 
-extension UITextField {
+public extension UITextField {
     
     private struct AssociatedKey {
         static var floatingLabelColor    = "floatingLabelColor"
@@ -139,11 +139,11 @@ extension UITextField {
         self.addTarget(self, action: Selector(("showFloatingLabel")), for: UIControlEvents.editingChanged)
     }
     
-    func updateDefaultFloatingLabel(label:UILabel) {
+    internal func updateDefaultFloatingLabel(label:UILabel) {
         label.textColor = floatingLabelTextColor
     }
     
-    private func showFloatingLabel() {
+    internal private func showFloatingLabel() {
         if(self.text!.characters.count > 0)
         {
             for subview in (self.superview?.subviews)!
@@ -171,7 +171,7 @@ extension UITextField {
         }
     }
     
-    private func hideFloatingLabel()
+    internal func hideFloatingLabel()
     {
         let trimmedText = self.text!.trimmingCharacters(in: NSCharacterSet.whitespaces)
         if(trimmedText == "")

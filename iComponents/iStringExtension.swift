@@ -17,7 +17,7 @@ extension Optional where Wrapped: OptionalString {
     }
 }
 
-extension String {
+public extension String {
     /**
      * get number of characters in a string.
      */
