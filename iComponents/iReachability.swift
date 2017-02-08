@@ -19,20 +19,6 @@ public enum ReachabilityError: Error {
 public let ReachabilityChangedNotification = NSNotification.Name("ReachabilityChangedNotification")
 
 
-var reachInstance:Reachability! {
-    get {
-        guard reachInstance != nil else {
-            reachInstance = Reachability.init(hostname: "www.google.com")
-            return reachInstance
-        }
-        return reachInstance
-    }
-
-    set {
-        reachInstance = Reachability.init(hostname: "www.google.com")
-    }
-}
-
 func callback(reachability:SCNetworkReachability, flags: SCNetworkReachabilityFlags, info: UnsafeMutableRawPointer?) {
     
     guard let info = info else { return }
@@ -44,8 +30,16 @@ func callback(reachability:SCNetworkReachability, flags: SCNetworkReachabilityFl
     }
 }
 
+private let reachabilityHostName = "https://www.google.com"
+
 public class Reachability {
     
+    public static var sharedInstance : Reachability {
+        struct Static {
+            static let instance : Reachability = Reachability.init(hostname: reachabilityHostName)!
+        }
+        return Static.instance
+    }
     public typealias NetworkReachable = (Reachability) -> ()
     public typealias NetworkUnreachable = (Reachability) -> ()
     
