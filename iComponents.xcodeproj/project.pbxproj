@@ -25,7 +25,6 @@
 		8C61DD8E1E260590007BCB2D /* iComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */; };
 		8C61DD901E260590007BCB2D /* iComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C61DD821E26058F007BCB2D /* iComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD9F1E260CD2007BCB2D /* iCache.swift */; };
-		D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D2461E40B1E800D1371B /* iReachability.swift */; };
 		8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A6FE1E48851B00907D21 /* AppDelegate.swift */; };
 		8C79A7011E48851B00907D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A7001E48851B00907D21 /* ViewController.swift */; };
 		8C79A7041E48851B00907D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7021E48851B00907D21 /* Main.storyboard */; };
@@ -33,6 +32,7 @@
 		8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */; };
 		8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D2461E40B1E800D1371B /* iReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,6 @@
 		8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iComponentsTests.swift; sourceTree = "<group>"; };
 		8C61DD8F1E260590007BCB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C61DD9F1E260CD2007BCB2D /* iCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCache.swift; sourceTree = "<group>"; };
-		D0F9D2461E40B1E800D1371B /* iReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iReachability.swift; sourceTree = "<group>"; };
 		8C79A6FC1E48851B00907D21 /* iComponent-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iComponent-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C79A6FE1E48851B00907D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C79A7001E48851B00907D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		8C79A7051E48851B00907D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C79A7081E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C79A70A1E48851B00907D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F9D2461E40B1E800D1371B /* iReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,6 @@
 				8C61DD8C1E260590007BCB2D /* iComponentsTests */,
 				8C79A6FD1E48851B00907D21 /* iComponent-Demo */,
 				8C61DD801E26058F007BCB2D /* Products */,
-				D0F9D27A1E40B94000D1371B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,13 +149,6 @@
 				8C61DD8F1E260590007BCB2D /* Info.plist */,
 			);
 			path = iComponentsTests;
-			sourceTree = "<group>";
-		};
-		D0F9D27A1E40B94000D1371B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8C79A6FD1E48851B00907D21 /* iComponent-Demo */ = {
@@ -652,6 +644,7 @@
 				8C79A6F31E48813F00907D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C79A70B1E48851B00907D21 /* Build configuration list for PBXNativeTarget "iComponent-Demo" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +653,7 @@
 				8C79A70D1E48851B00907D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

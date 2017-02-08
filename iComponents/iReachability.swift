@@ -40,6 +40,7 @@ public class Reachability {
         }
         return Static.instance
     }
+    
     public typealias NetworkReachable = (Reachability) -> ()
     public typealias NetworkUnreachable = (Reachability) -> ()
     
