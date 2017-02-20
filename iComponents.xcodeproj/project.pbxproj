@@ -32,6 +32,7 @@
 		8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */; };
 		8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0E948A71E4AED0C004FE734 /* GesturAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		8C79A7051E48851B00907D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C79A7081E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C79A70A1E48851B00907D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				8C61DD821E26058F007BCB2D /* iComponents.h */,
 				8C61DD831E26058F007BCB2D /* Info.plist */,
 				8C61DD9F1E260CD2007BCB2D /* iCache.swift */,
+				E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */,
 			);
 			path = iComponents;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */,
+				E0E948A71E4AED0C004FE734 /* GesturAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ranosys.iComponent-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -595,7 +599,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ranosys.iComponent-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -640,6 +644,7 @@
 				8C79A6F31E48813F00907D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C79A70B1E48851B00907D21 /* Build configuration list for PBXNativeTarget "iComponent-Demo" */ = {
 			isa = XCConfigurationList;
@@ -648,6 +653,7 @@
 				8C79A70D1E48851B00907D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
