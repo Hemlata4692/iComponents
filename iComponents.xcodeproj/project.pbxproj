@@ -32,6 +32,7 @@
 		8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */; };
 		8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0051AD71E602349009734D1 /* GestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0051AD61E602349009734D1 /* GestureTableViewController.swift */; };
 		E0E948A71E4AED0C004FE734 /* GesturAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		8C79A7051E48851B00907D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C79A7081E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C79A70A1E48851B00907D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0051AD61E602349009734D1 /* GestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewController.swift; sourceTree = "<group>"; };
 		E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 			children = (
 				8C79A6FE1E48851B00907D21 /* AppDelegate.swift */,
 				8C79A7001E48851B00907D21 /* ViewController.swift */,
+				E0051AD61E602349009734D1 /* GestureTableViewController.swift */,
 				8C79A7021E48851B00907D21 /* Main.storyboard */,
 				8C79A7051E48851B00907D21 /* Assets.xcassets */,
 				8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */,
@@ -350,6 +353,7 @@
 			files = (
 				8C79A7011E48851B00907D21 /* ViewController.swift in Sources */,
 				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
+				E0051AD71E602349009734D1 /* GestureTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
