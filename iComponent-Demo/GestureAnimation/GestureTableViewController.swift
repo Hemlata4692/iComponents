@@ -33,7 +33,7 @@ class GestureTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedRowTilte = gestureTable[indexPath.row]
-        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "GestureView") as! ViewController
+        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "GestureView") as! GestureDetailViewController
         nextViewController.GestureType = selectedRowTilte
 //        self.present(nextViewController, animated:true, completion:nil)
         self.navigationController?.pushViewController(nextViewController, animated: true)
