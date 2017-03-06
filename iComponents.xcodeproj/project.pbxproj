@@ -25,8 +25,6 @@
 		8C61DD8E1E260590007BCB2D /* iComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */; };
 		8C61DD901E260590007BCB2D /* iComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C61DD821E26058F007BCB2D /* iComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD9F1E260CD2007BCB2D /* iCache.swift */; };
-		A648AB331E40B3EE00A74B48 /* iTextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648AB321E40B3EE00A74B48 /* iTextfieldExtension.swift */; };
-		A648AB351E40B41200A74B48 /* iStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648AB341E40B41200A74B48 /* iStringExtension.swift */; };
 		8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A6FE1E48851B00907D21 /* AppDelegate.swift */; };
 		8C79A7011E48851B00907D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A7001E48851B00907D21 /* ViewController.swift */; };
 		8C79A7041E48851B00907D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7021E48851B00907D21 /* Main.storyboard */; };
@@ -34,6 +32,9 @@
 		8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */; };
 		8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A648AB331E40B3EE00A74B48 /* iTextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648AB321E40B3EE00A74B48 /* iTextfieldExtension.swift */; };
+		A648AB351E40B41200A74B48 /* iStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648AB341E40B41200A74B48 /* iStringExtension.swift */; };
+		A67D86301E4AF32B00383F4D /* iTextFieldExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67D862F1E4AF32B00383F4D /* iTextFieldExampleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +76,6 @@
 		8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iComponentsTests.swift; sourceTree = "<group>"; };
 		8C61DD8F1E260590007BCB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C61DD9F1E260CD2007BCB2D /* iCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCache.swift; sourceTree = "<group>"; };
-		A648AB321E40B3EE00A74B48 /* iTextfieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextfieldExtension.swift; sourceTree = "<group>"; };
-		A648AB341E40B41200A74B48 /* iStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iStringExtension.swift; sourceTree = "<group>"; };
 		8C79A6FC1E48851B00907D21 /* iComponent-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iComponent-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C79A6FE1E48851B00907D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C79A7001E48851B00907D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +83,9 @@
 		8C79A7051E48851B00907D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C79A7081E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C79A70A1E48851B00907D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A648AB321E40B3EE00A74B48 /* iTextfieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextfieldExtension.swift; sourceTree = "<group>"; };
+		A648AB341E40B41200A74B48 /* iStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iStringExtension.swift; sourceTree = "<group>"; };
+		A67D862F1E4AF32B00383F4D /* iTextFieldExampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextFieldExampleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		8C79A6FD1E48851B00907D21 /* iComponent-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				A67D862E1E4AF2E000383F4D /* iTextFIeldExample */,
 				8C79A6FE1E48851B00907D21 /* AppDelegate.swift */,
 				8C79A7001E48851B00907D21 /* ViewController.swift */,
 				8C79A7021E48851B00907D21 /* Main.storyboard */,
@@ -165,6 +168,14 @@
 				8C79A70A1E48851B00907D21 /* Info.plist */,
 			);
 			path = "iComponent-Demo";
+			sourceTree = "<group>";
+		};
+		A67D862E1E4AF2E000383F4D /* iTextFIeldExample */ = {
+			isa = PBXGroup;
+			children = (
+				A67D862F1E4AF32B00383F4D /* iTextFieldExampleController.swift */,
+			);
+			name = iTextFIeldExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C79A7011E48851B00907D21 /* ViewController.swift in Sources */,
+				A67D86301E4AF32B00383F4D /* iTextFieldExampleController.swift in Sources */,
 				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,7 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ranosys.iComponent-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -603,7 +615,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ranosys.iComponent-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,6 +660,7 @@
 				8C79A6F31E48813F00907D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C79A70B1E48851B00907D21 /* Build configuration list for PBXNativeTarget "iComponent-Demo" */ = {
 			isa = XCConfigurationList;
@@ -656,6 +669,7 @@
 				8C79A70D1E48851B00907D21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

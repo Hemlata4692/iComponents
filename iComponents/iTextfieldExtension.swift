@@ -143,7 +143,7 @@ public extension UITextField {
         label.textColor = floatingLabelTextColor
     }
     
-    internal private func showFloatingLabel() {
+    internal func showFloatingLabel() {
         if(self.text!.characters.count > 0)
         {
             for subview in (self.superview?.subviews)!
