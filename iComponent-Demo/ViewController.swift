@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iComponents
 
 class ViewController: UIViewController {
 
@@ -21,5 +22,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func zoomInOut(_ sender: Any) {
+        UIView().funcZoomInOut(image: UIImage(named:"download")!)
+    }
 }
 
