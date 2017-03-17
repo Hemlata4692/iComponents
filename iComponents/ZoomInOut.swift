@@ -59,11 +59,6 @@ extension UIView {
         closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         closeButton.titleLabel?.textColor = UIColor.black
         closeButton.addTarget(self, action: #selector(removeZoomViewFromWindow), for: .touchUpInside)
-        
-        // Set up close button corner radius
-        closeButton.layer.cornerRadius = closeButton.frame.size.height/2
-        closeButton.layer.borderWidth = 2.0
-        closeButton.layer.borderColor = UIColor.white.cgColor
         self.addSubview(closeButton)
         
         loadZoomViewOnWindow()
