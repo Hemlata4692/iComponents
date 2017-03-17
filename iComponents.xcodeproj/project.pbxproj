@@ -32,6 +32,9 @@
 		8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */; };
 		8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6900B981E7BDDAD0028B3CB /* iTextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6900B961E7BDDAD0028B3CB /* iTextfieldExtension.swift */; };
+		A6900B991E7BDDAD0028B3CB /* iStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6900B971E7BDDAD0028B3CB /* iStringExtension.swift */; };
+		A6900B9B1E7BDDE10028B3CB /* iTextFieldExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6900B9A1E7BDDE10028B3CB /* iTextFieldExampleController.swift */; };
 		D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D2461E40B1E800D1371B /* iReachability.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		8C79A7051E48851B00907D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C79A7081E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C79A70A1E48851B00907D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6900B961E7BDDAD0028B3CB /* iTextfieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextfieldExtension.swift; sourceTree = "<group>"; };
+		A6900B971E7BDDAD0028B3CB /* iStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iStringExtension.swift; sourceTree = "<group>"; };
+		A6900B9A1E7BDDE10028B3CB /* iTextFieldExampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextFieldExampleController.swift; sourceTree = "<group>"; };
 		D0F9D2461E40B1E800D1371B /* iReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,8 @@
 				8C61DD831E26058F007BCB2D /* Info.plist */,
 				8C61DD9F1E260CD2007BCB2D /* iCache.swift */,
 				D0F9D2461E40B1E800D1371B /* iReachability.swift */,
+				A6900B971E7BDDAD0028B3CB /* iStringExtension.swift */,
+				A6900B961E7BDDAD0028B3CB /* iTextfieldExtension.swift */,
 			);
 			path = iComponents;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 			children = (
 				8C79A6FE1E48851B00907D21 /* AppDelegate.swift */,
 				8C79A7001E48851B00907D21 /* ViewController.swift */,
+				A6900B9A1E7BDDE10028B3CB /* iTextFieldExampleController.swift */,
 				8C79A7021E48851B00907D21 /* Main.storyboard */,
 				8C79A7051E48851B00907D21 /* Assets.xcassets */,
 				8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */,
@@ -331,7 +340,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6900B981E7BDDAD0028B3CB /* iTextfieldExtension.swift in Sources */,
 				D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */,
+				A6900B991E7BDDAD0028B3CB /* iStringExtension.swift in Sources */,
 				8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C79A7011E48851B00907D21 /* ViewController.swift in Sources */,
+				A6900B9B1E7BDDE10028B3CB /* iTextFieldExampleController.swift in Sources */,
 				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

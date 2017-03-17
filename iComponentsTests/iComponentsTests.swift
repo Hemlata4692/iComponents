@@ -10,10 +10,13 @@ import XCTest
 @testable import iComponents
 
 class iComponentsTests: XCTestCase {
+    let textField = UITextField()
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        textField.frame = CGRectMake(0.0, 0.0, 100.0, 44.0)
+        textField.placeholder = "Test"
     }
     
     override func tearDown() {
@@ -33,4 +36,13 @@ class iComponentsTests: XCTestCase {
         }
     }
     
+    func testDefaults() {
+        XCTAssertNil(self.textField.placeholder)
+        XCTAssertNil(self.textField.placeHolderColor)
+        XCTAssert(CGColorEqualToColor(self.textField.placeHolderColor!.CGColor, UIColor.grayColor().CGColor))
+        
+        XCTAssertEqual(self.textField.floatingLabelXPadding, 0.0)
+        XCTAssertEqual(self.textField.floatingLabelYPadding, 0.0)
+        XCTAssert(CGColorEqualToColor(self.textField.floatingLabelTextColor!.CGColor, UIColor.grayColor().CGColor))
+    }
 }
