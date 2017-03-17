@@ -136,14 +136,10 @@ public extension UITextField {
         floatingLabel.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: kFloatingLabelHeight)
         floatingLabel.alpha = 0.0
         self.superview?.addSubview(floatingLabel)
-        self.addTarget(self, action: Selector(("showFloatingLabel")), for: UIControlEvents.editingChanged)
+        self.addTarget(self, action: #selector(self.hideShowFloatingLabel), for: UIControlEvents.editingChanged)
     }
     
-    internal func updateDefaultFloatingLabel(label:UILabel) {
-        label.textColor = floatingLabelTextColor
-    }
-    
-    internal func showFloatingLabel() {
+    internal func hideShowFloatingLabel() {
         if(self.text!.characters.count > 0)
         {
             for subview in (self.superview?.subviews)!
@@ -153,43 +149,38 @@ public extension UITextField {
                     let label:UILabel = subview as! UILabel
                     if (label.text == self.placeholder)
                     {
-                        updateDefaultFloatingLabel(label: label)
+                        label.textColor = floatingLabelTextColor
                         UIView.animate(withDuration: kFloatingLabelAnimationDuration, delay: 0.0, options: [.beginFromCurrentState, .curveEaseOut], animations: {
                             label.alpha = 1.0
                             label.frame = CGRect(x: (self.frame.origin.x + self.floatingLabelXPadding), y:
                                 (self.frame.origin.y + self.floatingLabelYPadding) - 2, width:
                                 label.frame.size.width, height:
                                 label.frame.size.height);
-                            }, completion: nil)
+                        }, completion: nil)
                     }
                 }
             }
         }
         else
         {
-            hideFloatingLabel()
-        }
-    }
-    
-    internal func hideFloatingLabel()
-    {
-        let trimmedText = self.text!.trimmingCharacters(in: NSCharacterSet.whitespaces)
-        if(trimmedText == "")
-        {
-            for subview in (self.superview?.subviews)!
+            let trimmedText = self.text!.trimmingCharacters(in: NSCharacterSet.whitespaces)
+            if(trimmedText == "")
             {
-                if subview.isKind(of: UILabel.self)
+                for subview in (self.superview?.subviews)!
                 {
-                    let label:UILabel = subview as! UILabel
-                    if (label.text == self.placeholder)
+                    if subview.isKind(of: UILabel.self)
                     {
-                        UIView.animate(withDuration: kFloatingLabelAnimationDuration, delay: 0.0, options: [.beginFromCurrentState, .curveEaseIn], animations: {
-                            label.alpha = 0.0
-                            label.frame = CGRect(x: (self.frame.origin.x + self.floatingLabelXPadding), y:
-                                (self.frame.origin.y + self.floatingLabelYPadding), width:
-                                label.frame.size.width, height:
-                                label.frame.size.height);
+                        let label:UILabel = subview as! UILabel
+                        if (label.text == self.placeholder)
+                        {
+                            UIView.animate(withDuration: kFloatingLabelAnimationDuration, delay: 0.0, options: [.beginFromCurrentState, .curveEaseIn], animations: {
+                                label.alpha = 0.0
+                                label.frame = CGRect(x: (self.frame.origin.x + self.floatingLabelXPadding), y:
+                                    (self.frame.origin.y + self.floatingLabelYPadding), width:
+                                    label.frame.size.width, height:
+                                    label.frame.size.height);
                             }, completion: nil)
+                        }
                     }
                 }
             }
