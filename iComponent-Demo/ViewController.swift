@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
     @IBAction func zoomInOut(_ sender: Any) {
         UIView().funcZoomInOut(image: UIImage(named:"download")!)
     }
