@@ -136,52 +136,26 @@ public extension UITextField {
         floatingLabel.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: kFloatingLabelHeight)
         floatingLabel.alpha = 0.0
         self.superview?.addSubview(floatingLabel)
-        self.addTarget(self, action: #selector(self.hideShowFloatingLabel), for: UIControlEvents.editingChanged)
+        self.addTarget(self, action: #selector(hideShowFloatingLabel), for: UIControlEvents.editingChanged)
     }
     
     internal func hideShowFloatingLabel() {
-        if(self.text!.characters.count > 0)
+        let trimmedText = self.text!.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        let isShowFloatingLabel = trimmedText == "" ? false : true
+        for subview in (self.superview?.subviews)!
         {
-            for subview in (self.superview?.subviews)!
+            if subview.isKind(of: UILabel.self)
             {
-                if subview.isKind(of: UILabel.self)
+                let label:UILabel = subview as! UILabel
+                if (label.text == self.placeholder)
                 {
-                    let label:UILabel = subview as! UILabel
-                    if (label.text == self.placeholder)
-                    {
-                        label.textColor = floatingLabelTextColor
-                        UIView.animate(withDuration: kFloatingLabelAnimationDuration, delay: 0.0, options: [.beginFromCurrentState, .curveEaseOut], animations: {
-                            label.alpha = 1.0
-                            label.frame = CGRect(x: (self.frame.origin.x + self.floatingLabelXPadding), y:
-                                (self.frame.origin.y + self.floatingLabelYPadding) - 2, width:
-                                label.frame.size.width, height:
-                                label.frame.size.height);
-                        }, completion: nil)
-                    }
-                }
-            }
-        }
-        else
-        {
-            let trimmedText = self.text!.trimmingCharacters(in: NSCharacterSet.whitespaces)
-            if(trimmedText == "")
-            {
-                for subview in (self.superview?.subviews)!
-                {
-                    if subview.isKind(of: UILabel.self)
-                    {
-                        let label:UILabel = subview as! UILabel
-                        if (label.text == self.placeholder)
-                        {
-                            UIView.animate(withDuration: kFloatingLabelAnimationDuration, delay: 0.0, options: [.beginFromCurrentState, .curveEaseIn], animations: {
-                                label.alpha = 0.0
-                                label.frame = CGRect(x: (self.frame.origin.x + self.floatingLabelXPadding), y:
-                                    (self.frame.origin.y + self.floatingLabelYPadding), width:
-                                    label.frame.size.width, height:
-                                    label.frame.size.height);
-                            }, completion: nil)
-                        }
-                    }
+                    label.textColor = floatingLabelTextColor
+                    UIView.animate(withDuration: kFloatingLabelAnimationDuration, delay: 0.0, options: [.beginFromCurrentState, isShowFloatingLabel ? .curveEaseOut : .curveEaseIn], animations: {
+                        label.alpha = isShowFloatingLabel ? 1.0 : 0.0
+                        let yOrigin = isShowFloatingLabel ? (self.frame.origin.y + self.floatingLabelYPadding) - 2 : (self.frame.origin.y + self.floatingLabelYPadding)
+                        label.frame = CGRect(x: (self.frame.origin.x + self.floatingLabelXPadding), y: yOrigin, width: label.frame.size.width, height:
+                            label.frame.size.height);
+                    }, completion: nil)
                 }
             }
         }
