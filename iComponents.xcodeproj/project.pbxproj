@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */; };
 		8C61DD891E260590007BCB2D /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C61DD8E1E260590007BCB2D /* iComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */; };
 		8C61DD901E260590007BCB2D /* iComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C61DD821E26058F007BCB2D /* iComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomInOut.swift; sourceTree = "<group>"; };
 		8C61DD7F1E26058F007BCB2D /* iComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C61DD821E26058F007BCB2D /* iComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iComponents.h; sourceTree = "<group>"; };
 		8C61DD831E26058F007BCB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				8C61DD821E26058F007BCB2D /* iComponents.h */,
 				8C61DD831E26058F007BCB2D /* Info.plist */,
 				8C61DD9F1E260CD2007BCB2D /* iCache.swift */,
+				15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */,
 				D0F9D2461E40B1E800D1371B /* iReachability.swift */,
 				A6900B971E7BDDAD0028B3CB /* iStringExtension.swift */,
 				A6900B961E7BDDAD0028B3CB /* iTextfieldExtension.swift */,
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6900B981E7BDDAD0028B3CB /* iTextfieldExtension.swift in Sources */,
+				15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */,
 				D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */,
 				A6900B991E7BDDAD0028B3CB /* iStringExtension.swift in Sources */,
 				8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */,
