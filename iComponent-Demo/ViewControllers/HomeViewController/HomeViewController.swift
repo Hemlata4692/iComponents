@@ -13,7 +13,7 @@ class HomeViewController: iComponentsViewController {
 
     @IBOutlet weak var componentsTableView: UITableView!
     
-    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example"]
+    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example"]
 
     
     override func viewDidLoad() {
@@ -63,6 +63,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
 
+        case 5:
+            generateCrashLogs()
+            
         default:
             break;
         }
@@ -82,5 +85,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func generateCrashLogs() {
+        let dict: NSDictionary = ["key1":"value1","key2":"value2"]
+        
+        // Enable writing in log file if not in DEBUG mode
+        Logs.instance.isEnableResponseLogFile = true
+        
+        // Print in console if DEBUG mode, else write in log file
+        // To check the file in debug mode, commnet the preprocessor directive of if-else
+        Logs.DLog(object: dict)
+        
+        // Send email with log file
+        Logs.instance.sendEmail(vc: self)
+        
+        // Clear log file content
+        // Logs.clearContentsOfResponseLogFile()
     }
 }
