@@ -250,17 +250,14 @@ public class TutorialView: UIView {
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == topScrollView {
             if availableBottomScrollWidth == nil || availableTopScrollWidth == nil {
-                if bottomScrollChildViewWidth.constant - DeviceScreenSize.width > 0 {
-                    availableBottomScrollWidth = bottomScrollChildViewWidth.constant - DeviceScreenSize.width
-                } else {
-                    availableBottomScrollWidth = 0
-                }
                 
-                if topScrollChildViewWidth.constant - DeviceScreenSize.width > 0 {
-                    availableTopScrollWidth = topScrollChildViewWidth.constant - DeviceScreenSize.width
-                } else {
-                    availableTopScrollWidth = 0
-                }
+                // Set bottom scroll width
+                var difference = bottomScrollChildViewWidth.constant - DeviceScreenSize.width
+                availableBottomScrollWidth = difference > 0 ? difference : 0
+                
+                // Set top scroll width
+                difference = topScrollChildViewWidth.constant - DeviceScreenSize.width
+                availableTopScrollWidth = difference > 0 ? difference : 0
                 
                 layoutIfNeeded()
             }
