@@ -193,7 +193,7 @@ public class TutorialView: UIView {
         while idx < topImagesArray.count{
             var yOrigin: CGFloat = 0.0
             let topView = UIView.init(frame: CGRect(x: xOrigin, y: 0.0, width: DeviceScreenSize.width, height: DeviceScreenSize.height))
-                topView.backgroundColor = UIColor.clear
+                topView.backgroundColor = .clear
    
             // Place image view same height with "bottomImageView"
             let imageV = UIImageView.init(frame: CGRect(x: 0.0, y: 0.0, width: DeviceScreenSize.width, height: bottomScrollImageViewheight.constant))
