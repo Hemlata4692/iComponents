@@ -9,12 +9,7 @@
 import UIKit
 import iComponents
 
-private let cancel                                  = "Cancel"
-private let settings                                = "Settings"
-private let locationServiceAlertTittle              = "Location Service Disabled"
-private let locationServiceAlertMessage: String     = "Your location service is not enabled for the app. \nTo enable go Setting > your App > Location then enable it."
-
-class ViewController: UIViewController, iLocationPermissionDelegate {
+class ViewController: UIViewController, IlocationPermissionDelegate {
 
 
     override func viewDidLoad() {
@@ -28,11 +23,9 @@ class ViewController: UIViewController, iLocationPermissionDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        /// Get curren location
-        guard iLocationPermission.sharedInstance.checkLocationPermissions(delegate: self) else {
-            showAlertForEnableLocations()
-            return
-        }
+        IlocationPermission.sharedInstance.locationDelegate = self
+        IlocationPermission.sharedInstance.getLocation(target: self)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,28 +39,7 @@ class ViewController: UIViewController, iLocationPermissionDelegate {
     
     public func updateLocation(locationsArray: NSArray) {
         print("Current Location Cordinate: \(locationsArray.lastObject!)")
-        iLocationPermission.sharedInstance.stopLocation()
+        IlocationPermission.sharedInstance.stopLocation()
     }
-    
-    /**
-     Show alert when location manager's service status/authorization status is disable.
-     */
-    func showAlertForEnableLocations() {
-        
-        let alert = UIAlertController.init(title: locationServiceAlertTittle, message: locationServiceAlertMessage, preferredStyle: .alert)
-        let settingsButton = UIAlertAction.init(title: settings, style: .default) { action -> Void in
-            let urlObj = URL(string:"App-Prefs:root=Privacy&path=LOCATION")!
-            if UIApplication.shared.canOpenURL(urlObj) {
-                UIApplication.shared.openURL(urlObj)
-            }
-            
-        }
-        let cancelButton = UIAlertAction.init(title: cancel, style: .cancel, handler: nil)
-        alert.addAction(settingsButton)
-        alert.addAction(cancelButton)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-
 }
 

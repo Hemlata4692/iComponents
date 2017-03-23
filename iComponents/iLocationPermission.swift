@@ -1,5 +1,5 @@
 //
-//  iLocationPermission.swift
+//  IlocationPermission.swift
 //  imReporter
 //
 //  Created by Kritika Middha on 16/03/17.
@@ -9,8 +9,12 @@
 import UIKit
 import CoreLocation
 
+private let cancel                                  = "Cancel"
+private let settings                                = "Settings"
+private let locationServiceAlertTittle              = "Location Service Disabled"
+private let locationServiceAlertMessage: String     = "Your location service is not enabled for the app. \nTo enable go Setting > %@ > Location then enable it."
 
-public protocol iLocationPermissionDelegate {
+public protocol IlocationPermissionDelegate {
     /**
      Get current location array when it retrived.
      
@@ -19,17 +23,21 @@ public protocol iLocationPermissionDelegate {
     func updateLocation(locationsArray: NSArray)
 }
 
-public class iLocationPermission: NSObject, CLLocationManagerDelegate {
+/**
+ IlocationPermission class is for get current location of user.
+ */
+
+
+public class IlocationPermission: NSObject {
     
     /// Location manager variable.
     var kLocationManager : CLLocationManager?
     
-    ///  Delegate variable of "iLocationPermissionDelegate" protocol.
-    var locationDelegate : iLocationPermissionDelegate?
+    ///  Delegate variable of "IlocationPermissionDelegate" protocol.
+   public var locationDelegate : IlocationPermissionDelegate?
     
-    /// Instance variable of "iLocationPermission" class.
-    public static let sharedInstance = iLocationPermission.init()
-    
+    /// Instance variable of "IlocationPermission" class.
+    public static let sharedInstance = IlocationPermission.init()
     
     /**
      initialization and setup of location
@@ -51,40 +59,57 @@ public class iLocationPermission: NSObject, CLLocationManagerDelegate {
     /**
      Check location manager's service status and authorization status.
 
-     - parameter delegate: refrence of view controller for iLocationPermissionDelegate delegate object .
+     - parameter delegate: refrence of view controller for IlocationPermissionDelegate delegate object .
      */
-    public func checkLocationPermissions(delegate: iLocationPermissionDelegate) -> Bool {
-        var status: Bool = false
+    public func getLocation(target: UIViewController) {
         
         if CLLocationManager.locationServicesEnabled() {
             switch(CLLocationManager.authorizationStatus()) {
             case .notDetermined, .restricted, .denied:
-                status = false
+                showAlertForEnableLocations(target: target)
                 break
                 
             case .authorizedAlways, .authorizedWhenInUse:
-                locationDelegate = delegate
                 DispatchQueue.main.async {
                     self.kLocationManager?.startUpdatingLocation()
                 }
-                status = true
                 break
             }
         } else {
-            status = false
+            showAlertForEnableLocations(target: target)
         }
-        return status
+    }
+    
+    /**
+     Show alert when location manager's service status/authorization status is disable.
+     */
+    func showAlertForEnableLocations(target: UIViewController) {
+        let appName = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+
+        let alert = UIAlertController.init(title: locationServiceAlertTittle, message: String(format: locationServiceAlertMessage,appName), preferredStyle: .alert)
+        let settingsButton = UIAlertAction.init(title: settings, style: .default) { action -> Void in
+            let urlObj = URL(string:"App-Prefs:root=Privacy&path=LOCATION")!
+            if UIApplication.shared.canOpenURL(urlObj) {
+                UIApplication.shared.openURL(urlObj)
+            }
+        }
+        let cancelButton = UIAlertAction.init(title: cancel, style: .cancel, handler: nil)
+        alert.addAction(settingsButton)
+        alert.addAction(cancelButton)
+        target.present(alert, animated: true, completion: nil)
     }
     
     /**
      Stop update location.
      */
    public func stopLocation() {
-        kLocationManager?.startUpdatingLocation()
+        kLocationManager?.stopUpdatingLocation()
     }
-    
-    
-    //MARK:- CLLocation Manager delegates
+}
+
+extension IlocationPermission: CLLocationManagerDelegate {
+
+    // CLLocation Manager delegates
     /**
      Tells the delegate that new location data is available.
      
