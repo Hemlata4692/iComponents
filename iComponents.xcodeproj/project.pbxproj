@@ -22,32 +22,38 @@
 
 /* Begin PBXBuildFile section */
 		15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */; };
+		7412F33B1E8001AB009D8382 /* TutorialView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 747375BE1E7FFCEC000D0743 /* TutorialView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		747375A81E7FDAC4000D0743 /* iComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */; };
+		747375AB1E7FE064000D0743 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375AA1E7FE064000D0743 /* HomeViewController.swift */; };
+		747375AE1E7FE89C000D0743 /* iTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375AD1E7FE89C000D0743 /* iTextFieldViewController.swift */; };
+		747375B11E7FF34F000D0743 /* AppTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375B01E7FF34F000D0743 /* AppTutorialViewController.swift */; };
+		747375B31E7FF3B7000D0743 /* FrontTutorialAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747375B21E7FF3B7000D0743 /* FrontTutorialAssets.xcassets */; };
+		747375B51E7FF889000D0743 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
+		747375B61E7FF889000D0743 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		747375C21E7FFCEC000D0743 /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747375BF1E7FFCEC000D0743 /* TutorialView.xib */; };
+		747375E51E7FFF90000D0743 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375BE1E7FFCEC000D0743 /* TutorialView.swift */; };
 		8C61DD891E260590007BCB2D /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C61DD8E1E260590007BCB2D /* iComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */; };
 		8C61DD901E260590007BCB2D /* iComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C61DD821E26058F007BCB2D /* iComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD9F1E260CD2007BCB2D /* iCache.swift */; };
 		8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A6FE1E48851B00907D21 /* AppDelegate.swift */; };
-		8C79A7011E48851B00907D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A7001E48851B00907D21 /* ViewController.swift */; };
 		8C79A7041E48851B00907D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7021E48851B00907D21 /* Main.storyboard */; };
 		8C79A7061E48851B00907D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7051E48851B00907D21 /* Assets.xcassets */; };
 		8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */; };
-		8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
-		8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A677B9FB1E7BEEB0003D120D /* iStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677B9F91E7BEEB0003D120D /* iStringExtension.swift */; };
 		A677B9FC1E7BEEB0003D120D /* iTextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677B9FA1E7BEEB0003D120D /* iTextfieldExtension.swift */; };
-		A6900B9B1E7BDDE10028B3CB /* iTextFieldExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6900B9A1E7BDDE10028B3CB /* iTextFieldExampleController.swift */; };
 		D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D2461E40B1E800D1371B /* iReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8C61DD8A1E260590007BCB2D /* PBXContainerItemProxy */ = {
+		747375B71E7FF889000D0743 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8C61DD761E26058F007BCB2D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8C61DD7E1E26058F007BCB2D;
 			remoteInfo = iComponents;
 		};
-		8C79A7101E48852300907D21 /* PBXContainerItemProxy */ = {
+		8C61DD8A1E260590007BCB2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8C61DD761E26058F007BCB2D /* Project object */;
 			proxyType = 1;
@@ -57,13 +63,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8C79A7121E48852300907D21 /* Embed Frameworks */ = {
+		747375B91E7FF88A000D0743 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */,
+				747375B61E7FF889000D0743 /* iComponents.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +78,13 @@
 
 /* Begin PBXFileReference section */
 		15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomInOut.swift; sourceTree = "<group>"; };
+		747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iComponentsViewController.swift; sourceTree = "<group>"; };
+		747375AA1E7FE064000D0743 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		747375AD1E7FE89C000D0743 /* iTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextFieldViewController.swift; sourceTree = "<group>"; };
+		747375B01E7FF34F000D0743 /* AppTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTutorialViewController.swift; sourceTree = "<group>"; };
+		747375B21E7FF3B7000D0743 /* FrontTutorialAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FrontTutorialAssets.xcassets; sourceTree = "<group>"; };
+		747375BE1E7FFCEC000D0743 /* TutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		747375BF1E7FFCEC000D0743 /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
 		8C61DD7F1E26058F007BCB2D /* iComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C61DD821E26058F007BCB2D /* iComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iComponents.h; sourceTree = "<group>"; };
 		8C61DD831E26058F007BCB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,14 +94,12 @@
 		8C61DD9F1E260CD2007BCB2D /* iCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCache.swift; sourceTree = "<group>"; };
 		8C79A6FC1E48851B00907D21 /* iComponent-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iComponent-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C79A6FE1E48851B00907D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C79A7001E48851B00907D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C79A7031E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C79A7051E48851B00907D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C79A7081E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C79A70A1E48851B00907D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A677B9F91E7BEEB0003D120D /* iStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iStringExtension.swift; sourceTree = "<group>"; };
 		A677B9FA1E7BEEB0003D120D /* iTextfieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextfieldExtension.swift; sourceTree = "<group>"; };
-		A6900B9A1E7BDDE10028B3CB /* iTextFieldExampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextFieldExampleController.swift; sourceTree = "<group>"; };
 		D0F9D2461E40B1E800D1371B /* iReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,13 +123,58 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */,
+				747375B51E7FF889000D0743 /* iComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		747375A61E7FDA6F000D0743 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */,
+				747375A91E7FE027000D0743 /* HomeViewController */,
+				747375AC1E7FE5DD000D0743 /* iTextFieldViewController */,
+				747375AF1E7FF336000D0743 /* AppTutorialViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		747375A91E7FE027000D0743 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				747375AA1E7FE064000D0743 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		747375AC1E7FE5DD000D0743 /* iTextFieldViewController */ = {
+			isa = PBXGroup;
+			children = (
+				747375AD1E7FE89C000D0743 /* iTextFieldViewController.swift */,
+			);
+			path = iTextFieldViewController;
+			sourceTree = "<group>";
+		};
+		747375AF1E7FF336000D0743 /* AppTutorialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				747375B01E7FF34F000D0743 /* AppTutorialViewController.swift */,
+				747375B21E7FF3B7000D0743 /* FrontTutorialAssets.xcassets */,
+			);
+			path = AppTutorialViewController;
+			sourceTree = "<group>";
+		};
+		747375BC1E7FFCEC000D0743 /* FrontTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				747375BE1E7FFCEC000D0743 /* TutorialView.swift */,
+				747375BF1E7FFCEC000D0743 /* TutorialView.xib */,
+			);
+			path = FrontTutorial;
+			sourceTree = "<group>";
+		};
 		8C61DD751E26058F007BCB2D = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +198,7 @@
 		8C61DD811E26058F007BCB2D /* iComponents */ = {
 			isa = PBXGroup;
 			children = (
+				747375BC1E7FFCEC000D0743 /* FrontTutorial */,
 				A677B9F91E7BEEB0003D120D /* iStringExtension.swift */,
 				A677B9FA1E7BEEB0003D120D /* iTextfieldExtension.swift */,
 				8C61DD821E26058F007BCB2D /* iComponents.h */,
@@ -165,9 +222,8 @@
 		8C79A6FD1E48851B00907D21 /* iComponent-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				747375A61E7FDA6F000D0743 /* ViewControllers */,
 				8C79A6FE1E48851B00907D21 /* AppDelegate.swift */,
-				8C79A7001E48851B00907D21 /* ViewController.swift */,
-				A6900B9A1E7BDDE10028B3CB /* iTextFieldExampleController.swift */,
 				8C79A7021E48851B00907D21 /* Main.storyboard */,
 				8C79A7051E48851B00907D21 /* Assets.xcassets */,
 				8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */,
@@ -184,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C61DD901E260590007BCB2D /* iComponents.h in Headers */,
+				7412F33B1E8001AB009D8382 /* TutorialView.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,12 +290,12 @@
 				8C79A6F81E48851B00907D21 /* Sources */,
 				8C79A6F91E48851B00907D21 /* Frameworks */,
 				8C79A6FA1E48851B00907D21 /* Resources */,
-				8C79A7121E48852300907D21 /* Embed Frameworks */,
+				747375B91E7FF88A000D0743 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8C79A7111E48852300907D21 /* PBXTargetDependency */,
+				747375B81E7FF889000D0743 /* PBXTargetDependency */,
 			);
 			name = "iComponent-Demo";
 			productName = "iComponent-Demo";
@@ -300,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747375C21E7FFCEC000D0743 /* TutorialView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747375B31E7FF3B7000D0743 /* FrontTutorialAssets.xcassets in Resources */,
 				8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */,
 				8C79A7061E48851B00907D21 /* Assets.xcassets in Resources */,
 				8C79A7041E48851B00907D21 /* Main.storyboard in Resources */,
@@ -343,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747375E51E7FFF90000D0743 /* TutorialView.swift in Sources */,
 				15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */,
 				D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */,
 				A677B9FB1E7BEEB0003D120D /* iStringExtension.swift in Sources */,
@@ -363,8 +423,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C79A7011E48851B00907D21 /* ViewController.swift in Sources */,
-				A6900B9B1E7BDDE10028B3CB /* iTextFieldExampleController.swift in Sources */,
+				747375AB1E7FE064000D0743 /* HomeViewController.swift in Sources */,
+				747375AE1E7FE89C000D0743 /* iTextFieldViewController.swift in Sources */,
+				747375B11E7FF34F000D0743 /* AppTutorialViewController.swift in Sources */,
+				747375A81E7FDAC4000D0743 /* iComponentsViewController.swift in Sources */,
 				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,15 +434,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		747375B81E7FF889000D0743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C61DD7E1E26058F007BCB2D /* iComponents */;
+			targetProxy = 747375B71E7FF889000D0743 /* PBXContainerItemProxy */;
+		};
 		8C61DD8B1E260590007BCB2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8C61DD7E1E26058F007BCB2D /* iComponents */;
 			targetProxy = 8C61DD8A1E260590007BCB2D /* PBXContainerItemProxy */;
-		};
-		8C79A7111E48852300907D21 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C61DD7E1E26058F007BCB2D /* iComponents */;
-			targetProxy = 8C79A7101E48852300907D21 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -599,6 +661,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -614,6 +677,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
