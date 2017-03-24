@@ -28,25 +28,20 @@ public class Logs: NSObject {
     
     // MARK: Singleton class creation
     public static let instance = Logs()
-    public var isEnableResponseLogFile: Bool = false
+    public var enablePrintInLogFile: Bool = false
     public var viewDelegate = UIViewController()
 
-    override init() {
-        // uncomment this line if your class has been inherited from any other class
-        // super.init()
 
-    }
-    
     // Print in console if DEBUG mode, else write in log file
     public class func DLog<T>( object: @autoclosure() -> T, file: String = #file, function: String = #function, line: Int = #line) {
         let value = object()
         var stringRepresentation: String
         
         // Convert value object to to the string
-        if let value = value as? CustomDebugStringConvertible {
-            stringRepresentation = value.debugDescription
-        } else if let value = value as? CustomStringConvertible {
-            stringRepresentation = value.description
+        if let val = value as? CustomDebugStringConvertible {
+            stringRepresentation = val.debugDescription
+        } else if let val = value as? CustomStringConvertible {
+            stringRepresentation = val.description
         } else {
             fatalError("DLog only works for values that conform to CustomDebugStringConvertible or CustomStringConvertible")
         }
@@ -62,7 +57,6 @@ public class Logs: NSObject {
         let timestamp = gFormatter.string(from: NSDate() as Date)
         let logString = ("\(timestamp) \(queue) = \(fileURL) | \(function)[\(line)]: " + stringRepresentation)
         
-        
         // Checking for the condition that if app is in debug mode, print logs in console
         // If in production mode, print logs in "response.doc" file
         #if DEBUG
@@ -73,7 +67,7 @@ public class Logs: NSObject {
         #else
             // Production Mode
             // Check if logging permission is set to 'true'
-            if Logs.instance.isEnableResponseLogFile {
+            if Logs.instance.enablePrintInLogFile {
                 
                 let docsDir: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
                 // Create directory path
@@ -101,8 +95,19 @@ public class Logs: NSObject {
         #endif
     }
     
+    class func getResponseFilePathIfExist() -> (isExist: Bool, path: String?) {
+        let docsDir: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        var filePath = docsDir.appendingPathComponent(DIRECTORY_FOLDER_NAME)
+        filePath = filePath.appendingPathComponent(RESPONSE_FILE_NAME)
+        
+        if FileManager.default.fileExists(atPath: filePath.path) {
+            return (true, filePath.path)
+        } else {
+            return (false, nil)
+        }
+    }
     
-    public class func createDirectory(directoryPath: String) -> Bool {
+    class func createDirectory(directoryPath: String) -> Bool {
         // Check if directory alredy exist
         NSLog("Directory Path: \(directoryPath)")
         
@@ -122,7 +127,7 @@ public class Logs: NSObject {
     }
     
     
-    public class func createFile(filePath: String) -> Bool {
+    class func createFile(filePath: String) -> Bool {
         // Check if file alredy exist
         // If Yes, just write into file
         // If Not, create file first, then write into file
@@ -137,14 +142,14 @@ public class Logs: NSObject {
         return isFileExist
     }
     
-    public class func writeToFile(filePath: String, content: String?) {
+    class func writeToFile(filePath: String, content: String?) {
         if content != nil {
             let existingData = checkExistingContent(filePath: filePath)
             let finalContent = existingData.appending("\n\n \(content!)")
             
             do {
                 // Write into the file
-                try finalContent.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
+                try finalContent.write(toFile: filePath, atomically: false, encoding: .utf8)
                 
             } catch let err as NSError {
                 NSLog("Unable to write into file: \(err.debugDescription)")
@@ -172,15 +177,13 @@ public class Logs: NSObject {
     }
     
     // MARK: Clear contents of file
-    class func clearContentsOfResponseLogFile() {
-        let docsDir: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        // Create directory path
-        var newDirPath = docsDir.appendingPathComponent(DIRECTORY_FOLDER_NAME)
-        newDirPath = newDirPath.appendingPathComponent(RESPONSE_FILE_NAME)
+    public class func clearContentsOfResponseLogFile() {
         
-        if FileManager.default.fileExists(atPath: newDirPath.path) {
+        // get directory path and existence
+        let file = getResponseFilePathIfExist()
+        if file.isExist {
             // Clear the file at this path
-            let file: FileHandle = FileHandle(forReadingAtPath: newDirPath.path)!
+            let file: FileHandle = FileHandle(forReadingAtPath: file.path!)!
             file.truncateFile(atOffset: 0)
         }
     }
@@ -193,28 +196,20 @@ public class Logs: NSObject {
 
 extension Logs: MFMailComposeViewControllerDelegate {
     
-    public func getResponseFilePath() -> String {
-        let docsDir: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        var filePath = docsDir.appendingPathComponent(DIRECTORY_FOLDER_NAME)
-        filePath = filePath.appendingPathComponent(RESPONSE_FILE_NAME)
-
-        return filePath.path
-    }
-    
-    public func sendEmail(vc: UIViewController) {
+    public func presentEmailComposeFromViewController(vc: UIViewController, recipients: [String]) {
         viewDelegate = vc
         
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["ankit.jayaswal@ranosys.com","kritika.middha@ranosys.com","ashish.solanki@ranosys.com"])
+            mail.setToRecipients(recipients)
             mail.setSubject("API Response Logs")
             mail.setMessageBody("<p>-- FYI -- <br> API Response Logs: To Check Crash in the App </br></p>", isHTML: true)
             
-            // Create directory path
-            let path = getResponseFilePath()
-            if FileManager.default.fileExists(atPath: path) {
-                if let fileData = NSData(contentsOfFile: path) {
+            // get directory path and existence
+            let file = Logs.getResponseFilePathIfExist()
+            if file.isExist {
+                if let fileData = NSData(contentsOfFile: file.path!) {
                     // File data loaded
                     mail.addAttachmentData(fileData as Data, mimeType: "application/msword", fileName: "RespnseLogs")
                 }
@@ -230,28 +225,25 @@ extension Logs: MFMailComposeViewControllerDelegate {
     }
     
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        var alertMsg = ""
         switch result {
         case .cancelled:
-            alertMsg = "Email sending cancelled"
+            Logs.DLog(object: "API Response Log: Email sending cancelled")
             break
         case .saved:
-            alertMsg = "Email saved"
+            Logs.DLog(object: "API Response Log: Email saved")
             break
         case .sent:
-            alertMsg = "Email sent"
+            Logs.DLog(object: "API Response Log: Email sent")
             Logs.clearContentsOfResponseLogFile()
             break
         default:
-            alertMsg = "Email sending failed: \(error?.localizedDescription)"
+            // Show alert for email failure
+            let alert = UIAlertController.init(title: "Alert", message: "Email sending failed: \(error?.localizedDescription)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+            viewDelegate.present(alert, animated: true, completion: nil)
             break
         }
         
-        // Show alert for email failure
-        let alert = UIAlertController.init(title: "Alert", message: alertMsg, preferredStyle: .alert)
-        alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
-        viewDelegate.present(alert, animated: true, completion: nil)
-
         // Dismiss MFMailComposeViewController view
         controller.dismiss(animated: true)
     }

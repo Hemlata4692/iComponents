@@ -91,14 +91,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let dict: NSDictionary = ["key1":"value1","key2":"value2"]
         
         // Enable writing in log file if not in DEBUG mode
-        Logs.instance.isEnableResponseLogFile = true
+        Logs.instance.enablePrintInLogFile = true
         
         // Print in console if DEBUG mode, else write in log file
         // To check the file in debug mode, commnet the preprocessor directive of if-else
         Logs.DLog(object: dict)
         
         // Send email with log file
-        Logs.instance.sendEmail(vc: self)
+        Logs.instance.presentEmailComposeFromViewController(vc: self, recipients: ["ankit.jayaswal@ranosys.com","kritika.middha@ranosys.com","ashish.solanki@ranosys.com"])
         
         // Clear log file content
         // Logs.clearContentsOfResponseLogFile()
