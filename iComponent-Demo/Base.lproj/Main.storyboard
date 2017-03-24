@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aMH-F0-GJw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lkf-dH-oNC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ccu-wJ-Vzg" id="yjJ-UW-RlQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -225,6 +225,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgu-RT-68y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288.80000000000001" y="-560.86956521739137"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="D69-aZ-VKb">
+            <objects>
+                <viewController storyboardIdentifier="mapVC" id="lkf-dH-oNC" customClass="MapViewController" customModule="iComponent_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w2D-zW-Ree"/>
+                        <viewControllerLayoutGuide type="bottom" id="AqK-ih-5RL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aKR-qP-K1R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5vo-he-X3S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5vo-he-X3S" firstAttribute="leading" secondItem="aKR-qP-K1R" secondAttribute="leading" id="FRY-eF-tr3"/>
+                            <constraint firstItem="AqK-ih-5RL" firstAttribute="top" secondItem="5vo-he-X3S" secondAttribute="bottom" id="XK6-Zm-5kn"/>
+                            <constraint firstItem="5vo-he-X3S" firstAttribute="top" secondItem="aKR-qP-K1R" secondAttribute="top" id="rv6-FI-vBJ"/>
+                            <constraint firstAttribute="trailing" secondItem="5vo-he-X3S" secondAttribute="trailing" id="tSe-LH-ajJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myMapView" destination="5vo-he-X3S" id="8dL-LV-2Ix"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYs-r0-Kvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="229.83508245877064"/>
         </scene>
     </scenes>
 </document>
