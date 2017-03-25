@@ -22,8 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */; };
-		69509E921E841EE300B7B38F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69509E911E841EE300B7B38F /* MapViewController.swift */; };
-		69509E961E841FDA00B7B38F /* iMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69509E951E841FDA00B7B38F /* iMapView.swift */; };
+		6918615E1E861F9E00963D1F /* Rtpl_textViewPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6918615D1E861F9E00963D1F /* Rtpl_textViewPlaceHolder.swift */; };
+		691861601E8622BE00963D1F /* Rtpl_textViewPlaceHolderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6918615F1E8622BE00963D1F /* Rtpl_textViewPlaceHolderClass.swift */; };
 		7412F33B1E8001AB009D8382 /* TutorialView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 747375BE1E7FFCEC000D0743 /* TutorialView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		747375A81E7FDAC4000D0743 /* iComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */; };
 		747375AB1E7FE064000D0743 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375AA1E7FE064000D0743 /* HomeViewController.swift */; };
@@ -80,8 +80,8 @@
 
 /* Begin PBXFileReference section */
 		15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomInOut.swift; sourceTree = "<group>"; };
-		69509E911E841EE300B7B38F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		69509E951E841FDA00B7B38F /* iMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iMapView.swift; sourceTree = "<group>"; };
+		6918615D1E861F9E00963D1F /* Rtpl_textViewPlaceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rtpl_textViewPlaceHolder.swift; sourceTree = "<group>"; };
+		6918615F1E8622BE00963D1F /* Rtpl_textViewPlaceHolderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rtpl_textViewPlaceHolderClass.swift; sourceTree = "<group>"; };
 		747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iComponentsViewController.swift; sourceTree = "<group>"; };
 		747375AA1E7FE064000D0743 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		747375AD1E7FE89C000D0743 /* iTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextFieldViewController.swift; sourceTree = "<group>"; };
@@ -134,18 +134,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		69509E901E841EBC00B7B38F /* MapViewController */ = {
+		6918615C1E861F7D00963D1F /* Rtpl_textViewPlaceHolder */ = {
 			isa = PBXGroup;
 			children = (
-				69509E911E841EE300B7B38F /* MapViewController.swift */,
+				6918615D1E861F9E00963D1F /* Rtpl_textViewPlaceHolder.swift */,
 			);
-			path = MapViewController;
+			path = Rtpl_textViewPlaceHolder;
 			sourceTree = "<group>";
 		};
 		747375A61E7FDA6F000D0743 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				69509E901E841EBC00B7B38F /* MapViewController */,
+				6918615C1E861F7D00963D1F /* Rtpl_textViewPlaceHolder */,
 				747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */,
 				747375A91E7FE027000D0743 /* HomeViewController */,
 				747375AC1E7FE5DD000D0743 /* iTextFieldViewController */,
@@ -219,7 +219,7 @@
 				8C61DD9F1E260CD2007BCB2D /* iCache.swift */,
 				15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */,
 				D0F9D2461E40B1E800D1371B /* iReachability.swift */,
-				69509E951E841FDA00B7B38F /* iMapView.swift */,
+				6918615F1E8622BE00963D1F /* Rtpl_textViewPlaceHolderClass.swift */,
 			);
 			path = iComponents;
 			sourceTree = "<group>";
@@ -416,13 +416,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69509E961E841FDA00B7B38F /* iMapView.swift in Sources */,
 				747375E51E7FFF90000D0743 /* TutorialView.swift in Sources */,
 				15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */,
 				D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */,
 				A677B9FB1E7BEEB0003D120D /* iStringExtension.swift in Sources */,
 				8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */,
 				A677B9FC1E7BEEB0003D120D /* iTextfieldExtension.swift in Sources */,
+				691861601E8622BE00963D1F /* Rtpl_textViewPlaceHolderClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,9 +439,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				747375AB1E7FE064000D0743 /* HomeViewController.swift in Sources */,
-				69509E921E841EE300B7B38F /* MapViewController.swift in Sources */,
 				747375AE1E7FE89C000D0743 /* iTextFieldViewController.swift in Sources */,
 				747375B11E7FF34F000D0743 /* AppTutorialViewController.swift in Sources */,
+				6918615E1E861F9E00963D1F /* Rtpl_textViewPlaceHolder.swift in Sources */,
 				747375A81E7FDAC4000D0743 /* iComponentsViewController.swift in Sources */,
 				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
 			);

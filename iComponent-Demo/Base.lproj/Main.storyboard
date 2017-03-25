@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="288.80000000000001" y="-560.86956521739137"/>
         </scene>
-        <!--Map View Controller-->
+        <!--View Controller-->
         <scene sceneID="D69-aZ-VKb">
             <objects>
-                <viewController storyboardIdentifier="mapVC" id="lkf-dH-oNC" customClass="MapViewController" customModule="iComponent_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lkf-dH-oNC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w2D-zW-Ree"/>
                         <viewControllerLayoutGuide type="bottom" id="AqK-ih-5RL"/>
@@ -238,21 +238,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5vo-he-X3S">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-70-Q5r" customClass="Rtpl_textViewPlaceHolderClass" customModule="iComponents">
+                                <rect key="frame" x="16" y="12" width="343" height="248"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="jQF-fH-DOM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
+                                        <mutableString key="value">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.2784313725" green="0.58431372550000005" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5vo-he-X3S" firstAttribute="leading" secondItem="aKR-qP-K1R" secondAttribute="leading" id="FRY-eF-tr3"/>
-                            <constraint firstItem="AqK-ih-5RL" firstAttribute="top" secondItem="5vo-he-X3S" secondAttribute="bottom" id="XK6-Zm-5kn"/>
-                            <constraint firstItem="5vo-he-X3S" firstAttribute="top" secondItem="aKR-qP-K1R" secondAttribute="top" id="rv6-FI-vBJ"/>
-                            <constraint firstAttribute="trailing" secondItem="5vo-he-X3S" secondAttribute="trailing" id="tSe-LH-ajJ"/>
+                            <constraint firstItem="ohf-70-Q5r" firstAttribute="top" secondItem="aKR-qP-K1R" secondAttribute="top" constant="12" id="6Bw-Hz-oA7"/>
+                            <constraint firstAttribute="trailing" secondItem="ohf-70-Q5r" secondAttribute="trailing" constant="16" id="RR8-d9-NVq"/>
+                            <constraint firstItem="ohf-70-Q5r" firstAttribute="leading" secondItem="aKR-qP-K1R" secondAttribute="leading" constant="16" id="mth-CV-hxK"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="myMapView" destination="5vo-he-X3S" id="8dL-LV-2Ix"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYs-r0-Kvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
