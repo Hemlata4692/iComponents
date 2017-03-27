@@ -12,7 +12,7 @@ import CoreLocation
 private let cancel                                  = "Cancel"
 private let settings                                = "Settings"
 private let locationServiceAlertTittle              = "Location Service Disabled"
-private let locationServiceAlertMessage: String     = "Your location service is not enabled for the app. \nTo enable go Setting > %@ > Location then enable it."
+private let locationServiceAlertMessage: String     = "Your location service is not enabled for the app. \nTo enable go Setting > %@ > Location, then enable it."
 
 public protocol IlocationPermissionDelegate {
     /**
@@ -51,6 +51,7 @@ public class IlocationPermission: NSObject {
         }
         
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 200
         locationManager.delegate = self
@@ -65,7 +66,7 @@ public class IlocationPermission: NSObject {
         
         if CLLocationManager.locationServicesEnabled() {
             switch(CLLocationManager.authorizationStatus()) {
-            case .notDetermined, .restricted, .denied:
+            case .restricted, .denied:
                 showAlertForEnableLocations(target: target)
                 break
                 
@@ -74,6 +75,7 @@ public class IlocationPermission: NSObject {
                     self.kLocationManager?.startUpdatingLocation()
                 }
                 break
+            default: break
             }
         } else {
             showAlertForEnableLocations(target: target)
