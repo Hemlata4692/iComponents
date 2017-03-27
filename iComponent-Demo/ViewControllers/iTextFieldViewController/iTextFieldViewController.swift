@@ -1,26 +1,34 @@
 //
-//  iTextFieldExampleController.swift
+//  iTextFieldViewController.swift
 //  iComponents
 //
-//  Created by Rahul Panchal on 08/02/17.
+//  Created by Ranosys Technologies on 20/03/17.
 //  Copyright © 2017 Ranosys. All rights reserved.
 //
 
 import UIKit
-import iComponents
 
-class iTextFieldExampleController: UIViewController, UITextFieldDelegate {
+class iTextFieldViewController: iComponentsViewController,UITextFieldDelegate {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var mobileNumberTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-
+    
+    
+    // MARK:
+    // MARK: View Methods
+    func actionBackButton() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationTitle(text: "iTextField")
         
-        // Do any additional setup after loading the view.
+        let backBtn =  addBackBtn()
+        backBtn.addTarget(self, action: #selector(actionBackButton), for: .touchUpInside)
         
         // add attributes to textfield
         addCustomAttributesToTextField(textField: firstNameTextField)
@@ -29,7 +37,6 @@ class iTextFieldExampleController: UIViewController, UITextFieldDelegate {
         addCustomAttributesToTextField(textField: mobileNumberTextField)
         addCustomAttributesToTextField(textField: passwordTextField)
         addCustomAttributesToTextField(textField: confirmPasswordTextField)
-
     }
     
     func addCustomAttributesToTextField(textField: UITextField) {
@@ -65,15 +72,4 @@ class iTextFieldExampleController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

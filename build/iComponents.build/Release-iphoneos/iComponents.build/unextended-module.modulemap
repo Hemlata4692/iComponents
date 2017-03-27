@@ -1,0 +1,10 @@
+framework module iComponents {
+  umbrella header "iComponents.h"
+
+  export *
+  module * { export * }
+}
+
+module iComponents.__Swift {
+    exclude header "iComponents-Swift.h"
+}

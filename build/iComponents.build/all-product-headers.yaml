@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/build/Release-iphoneos/iComponents.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "iComponents-Swift.h",
+          'external-contents': "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/build/Release-iphoneos/iComponents.framework/Headers/iComponents-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "iComponents.h",
+          'external-contents': "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/iComponents/iComponents.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/build/Release-iphoneos/iComponents.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/build/iComponents.build/Release-iphoneos/iComponents.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

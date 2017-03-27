@@ -10,13 +10,13 @@ import UIKit
 
 extension UIRefreshControl {
     
-    public func refreshConroller(view : UIView, AttributeString : String, backgroundColor: UIColor, tintColor: UIColor, textColor: UIColor) -> UIRefreshControl {
+    public func refreshConroller(view : UIView, AttributeString : String, backgroundColor: UIColor, tintColor: UIColor, textColor: UIColor, action: UIControl ){
     
         self.backgroundColor = backgroundColor
         self.attributedTitle = NSAttributedString(string: AttributeString, attributes:[NSForegroundColorAttributeName:textColor])
         self.tintColor = tintColor
         view.addSubview(self)
-        
-        return self
+        sendSubview(toBack: self)
+//        return self
     }
 }

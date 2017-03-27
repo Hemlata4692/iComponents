@@ -14,15 +14,6 @@ private let settings                                = "Settings"
 private let locationServiceAlertTittle              = "Location Service Disabled"
 private let locationServiceAlertMessage: String     = "Your location service is not enabled for the app. \nTo enable go Setting > %@ > Location, then enable it."
 
-public protocol IlocationPermissionDelegate {
-    /**
-     Get current location array when it retrived.
-     
-     - parameter locationsArray: An array containing the location data of all locations captured.
-     */
-    func updateLocation(locationsArray: NSArray)
-}
-
 /**
  IlocationPermission class is for get current location of user.
  */
@@ -31,13 +22,11 @@ public protocol IlocationPermissionDelegate {
 public class IlocationPermission: NSObject {
     
     /// Location manager variable.
-    var kLocationManager : CLLocationManager?
-    
-    ///  Delegate variable of "IlocationPermissionDelegate" protocol.
-   public var locationDelegate : IlocationPermissionDelegate?
+    var locationManager : CLLocationManager?
     
     /// Instance variable of "IlocationPermission" class.
     public static let sharedInstance = IlocationPermission.init()
+    var locationManagerClosures: [((_ userLocationArray: NSArray) -> ())] = []
     
     /**
      initialization and setup of location
@@ -45,13 +34,13 @@ public class IlocationPermission: NSObject {
     override init() {
         super.init()
         
-        self.kLocationManager = CLLocationManager()
-        guard let locationManager = self.kLocationManager else {
+        self.locationManager = CLLocationManager()
+        guard let locationManager = self.locationManager else {
             return
         }
         
+        locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
-        locationManager.requestAlwaysAuthorization()        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 200
         locationManager.delegate = self
@@ -62,7 +51,8 @@ public class IlocationPermission: NSObject {
 
      - parameter delegate: refrence of view controller for IlocationPermissionDelegate delegate object .
      */
-    public func getLocation(target: UIViewController) {
+    public func getCurrentLocation(target: UIViewController, userLocationClosure: @escaping ((_ userLocationArray: NSArray) -> ())) {
+        self.locationManagerClosures.append(userLocationClosure)
         
         if CLLocationManager.locationServicesEnabled() {
             switch(CLLocationManager.authorizationStatus()) {
@@ -72,7 +62,7 @@ public class IlocationPermission: NSObject {
                 
             case .authorizedAlways, .authorizedWhenInUse:
                 DispatchQueue.main.async {
-                    self.kLocationManager?.startUpdatingLocation()
+                    self.locationManager?.startUpdatingLocation()
                 }
                 break
             default: break
@@ -104,8 +94,8 @@ public class IlocationPermission: NSObject {
     /**
      Stop update location.
      */
-   public func stopLocation() {
-        kLocationManager?.stopUpdatingLocation()
+    public func stopLocation() {
+        locationManager?.stopUpdatingLocation()
     }
 }
 
@@ -119,7 +109,11 @@ extension IlocationPermission: CLLocationManagerDelegate {
      - parameter locations: An array of CLLocation objects containing the location data. This array always contains at least one object representing the current location.
      */
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locationDelegate?.updateLocation(locationsArray: locations as NSArray)
+        let tempClosures = self.locationManagerClosures
+        for closure in tempClosures {
+            closure(locations as NSArray)
+        }
+        self.locationManagerClosures = []
     }
     
     /**
