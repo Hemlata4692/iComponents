@@ -83,9 +83,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             message = "Please connect to some network and try again."
         }
         showToast(message: message, withDuration: 5.0)
-//        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
     }
     
     func generateCrashLogs() {
