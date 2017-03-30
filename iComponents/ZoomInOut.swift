@@ -36,7 +36,7 @@ extension UIView {
      
      - parameter image: The image which will Zoom In/Out.
      */
-    public func funcZoomInOut(image: UIImage) {
+    public func funcZoomInOut(image: UIImage, crossImage: UIImage) {
         // set up view
         self.frame = UIScreen.main.bounds
         self.backgroundColor = UIColor.black
@@ -71,7 +71,7 @@ extension UIView {
         // Create Close button on scroll
         let closeButton = UIButton()
         closeButton.frame = CGRect(x: self.frame.size.width/2 - 20, y: self.frame.size.height-50, width: 40, height: 40)
-        closeButton.setImage(UIImage(named: "cross_icon"), for: .normal)
+        closeButton.setImage(crossImage, for: .normal)
         closeButton.setTitleColor(UIColor.white, for: .normal)
         closeButton.titleLabel?.textAlignment = .center
         closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)

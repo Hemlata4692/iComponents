@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		15C9C7671E8BE1DB0006A1D4 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C7651E8BE1DB0006A1D4 /* CustomActivityIndicatorView.swift */; };
+		15C9C7681E8BE1DB0006A1D4 /* ProgressLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C7661E8BE1DB0006A1D4 /* ProgressLoader.swift */; };
 		15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */; };
 		15F2B31E1E88C4E600650ABD /* IlocationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F2B31C1E88C4E600650ABD /* IlocationPermission.swift */; };
 		7412F33B1E8001AB009D8382 /* TutorialView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 747375BE1E7FFCEC000D0743 /* TutorialView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,6 +81,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15C9C7651E8BE1DB0006A1D4 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
+		15C9C7661E8BE1DB0006A1D4 /* ProgressLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLoader.swift; sourceTree = "<group>"; };
 		15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomInOut.swift; sourceTree = "<group>"; };
 		15F2B31C1E88C4E600650ABD /* IlocationPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IlocationPermission.swift; sourceTree = "<group>"; };
 		7412F3601E84120D009D8382 /* NSLog+Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLog+Debug.swift"; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */,
 				D0F9D2461E40B1E800D1371B /* iReachability.swift */,
 				15F2B31C1E88C4E600650ABD /* IlocationPermission.swift */,
+				15C9C7651E8BE1DB0006A1D4 /* CustomActivityIndicatorView.swift */,
+				15C9C7661E8BE1DB0006A1D4 /* ProgressLoader.swift */,
 			);
 			path = iComponents;
 			sourceTree = "<group>";
@@ -418,8 +424,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				747375E51E7FFF90000D0743 /* TutorialView.swift in Sources */,
+				15C9C7681E8BE1DB0006A1D4 /* ProgressLoader.swift in Sources */,
 				7412F3611E84120D009D8382 /* NSLog+Debug.swift in Sources */,
 				15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */,
+				15C9C7671E8BE1DB0006A1D4 /* CustomActivityIndicatorView.swift in Sources */,
 				D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */,
 				A677B9FB1E7BEEB0003D120D /* iStringExtension.swift in Sources */,
 				8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */,

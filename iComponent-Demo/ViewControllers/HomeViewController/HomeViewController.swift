@@ -14,8 +14,13 @@ class HomeViewController: iComponentsViewController {
 
     @IBOutlet weak var componentsTableView: UITableView!
     
-    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example"]
-
+    var activityIndicator    : CustomActivityIndicatorView!
+    var loaderTimer          : Timer?
+    var loadedFileCount      = 0
+    let noOfFiles            = 4
+    
+    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example", "Custom Loader With App Icon", "Custorm Loader With Progress"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +61,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(navigationController, animated: true, completion: nil)
             
         case 2:
-            UIView().funcZoomInOut(image: UIImage(named:"download")!)
-
+            UIView().funcZoomInOut(image: UIImage(named:"download")!, crossImage: UIImage(named:"cross_icon")!)
+            
         case 3:
             let vc = (self.storyboard?.instantiateViewController(withIdentifier: "tutorial_vc"))!
             let navigationController = UINavigationController(rootViewController: vc)
@@ -77,8 +82,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 5:
             generateCrashLogs()
             
-        default:
-            break;
+        case 6:
+            activityIndicator = CustomActivityIndicatorView.init (loaderActivityType: .KMLoaderWithAppIcon,loaderActivityPresentType: .KMPresentOnView, target: self, appImage: UIImage(named:"appicon")!, loadingImage: UIImage(named:"Loader")!, loadingText: "Loading...", textColor: UIColor.black, textFont: UIFont.systemFont(ofSize: 13), strokeColor: UIColor.red, strokeWidth:  5.0, percent: 0.0)
+            activityIndicator.startAnimating()
+            
+        case 7:
+            activityIndicator = CustomActivityIndicatorView.init(loaderActivityType: .KMLoaderWithProgress ,loaderActivityPresentType: .KMPresentOnWindow, target: self, appImage: UIImage(named:"appicon")!, loadingImage: UIImage(named:"Loader")!, loadingText:  "loading... \(loadedFileCount) / \(noOfFiles)", textColor: UIColor.black, textFont: UIFont.systemFont(ofSize: 13), strokeColor: UIColor.red, strokeWidth:  5.0, percent: 0.0)
+            
+            activityIndicator.startAnimating()
+            
+            loaderTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.increamentSpin), userInfo: nil, repeats: true)
+            
+        default: break
         }
     }
     
@@ -114,4 +129,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         // Clear log file content
         // Logs.clearContentsOfResponseLogFile()
     }
+    
+    func increamentSpin() {
+        //          increament our percentage, do so, and redraw the view
+        
+        let incrementPercentag = 100 / noOfFiles
+        if Double(activityIndicator.percent) < 100.0 {
+            loadedFileCount += 1
+            activityIndicator.percent = activityIndicator.percent + Double(incrementPercentag)
+            activityIndicator.loadingText = "loading... \(loadedFileCount) / \(noOfFiles)"
+            activityIndicator.setNeedsDisplay()
+        }
+        else {
+            loaderTimer?.invalidate()
+            loaderTimer = nil
+            //activityIndicator.stopAnimating()
+        }
+    }
+    
+    
 }
