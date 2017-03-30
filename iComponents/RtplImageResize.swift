@@ -1,5 +1,5 @@
 //
-//  Rtpl_ImageResize.swift
+//  RtplImageResize.swift.swift
 //  iComponents
 //
 //  Created by Roshan Singh Bisht on 25/03/17.

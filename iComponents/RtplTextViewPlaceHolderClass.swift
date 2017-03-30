@@ -1,5 +1,5 @@
 //
-//  Rtpl_textViewPlaceHolderClass.swift
+//  RtplTextViewPlaceHolderClass.swift
 //  iComponents
 //
 //  Created by Roshan Singh Bisht on 25/03/17.
@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public class Rtpl_textViewPlaceHolderClass: UITextView {
+public class RtplTextViewPlaceHolderClass: UITextView {
     
     
     // taking a default Placeholder Color for placeholder label
@@ -26,7 +26,7 @@ public class Rtpl_textViewPlaceHolderClass: UITextView {
         }
     }
     
-    @IBInspectable open var placeholderColor: UIColor = Rtpl_textViewPlaceHolderClass.Constants.defaultiOSPlaceholderColor {
+    @IBInspectable open var placeholderColor: UIColor = RtplTextViewPlaceHolderClass.Constants.defaultiOSPlaceholderColor {
         didSet {
             placeholderLabel.textColor = placeholderColor
         }

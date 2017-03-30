@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lkf-dH-oNC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lkf-dH-oNC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -229,7 +229,7 @@
         <!--Image Resize View Controller-->
         <scene sceneID="D69-aZ-VKb">
             <objects>
-                <viewController id="lkf-dH-oNC" customClass="IC_ImageResizeViewController" customModule="iComponent_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lkf-dH-oNC" customClass="ICImageResizeViewController" customModule="iComponent_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w2D-zW-Ree"/>
                         <viewControllerLayoutGuide type="bottom" id="AqK-ih-5RL"/>
@@ -238,7 +238,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-70-Q5r" customClass="Rtpl_textViewPlaceHolderClass" customModule="iComponents">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-70-Q5r" customClass="RtplTextViewPlaceHolderClass" customModule="iComponents">
                                 <rect key="frame" x="16" y="12" width="343" height="248"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -319,15 +319,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="after" destination="Vwi-dW-gHe" id="Zri-iD-hNi"/>
-                        <outlet property="before" destination="1LZ-hJ-hUF" id="8rR-Fj-OXS"/>
-                        <outlet property="imageAfterCompression" destination="Zcl-sh-CMz" id="MV0-Qa-6qV"/>
-                        <outlet property="imageViewDemo" destination="HhA-sk-Vas" id="oiR-gm-dAX"/>
+                        <outlet property="imageViewAfterCompression" destination="Zcl-sh-CMz" id="eEF-2p-HJg"/>
+                        <outlet property="imageViewBeforeCompression" destination="HhA-sk-Vas" id="bXK-Gy-l0i"/>
+                        <outlet property="labelToshowSizeAfterCompreesion" destination="Vwi-dW-gHe" id="kXM-CF-BGX"/>
+                        <outlet property="labelToshowSizeBeforeCompreesion" destination="1LZ-hJ-hUF" id="JUi-Wo-B6U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYs-r0-Kvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="229.83508245877064"/>
+            <point key="canvasLocation" x="-161" y="234"/>
         </scene>
     </scenes>
 </document>
