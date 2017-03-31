@@ -7,18 +7,17 @@
 //
 
 import UIKit
+import CoreLocation
 import iComponents
 
 class HomeViewController: iComponentsViewController {
 
     @IBOutlet weak var componentsTableView: UITableView!
-    
-    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example","Image Resize Example", "TextView Placeholder Example"]
+        
+    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example","Image Resize Example", "TextView Placeholder Example","Custom Loader Example"]
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,13 +55,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(navigationController, animated: true, completion: nil)
             
         case 2:
-            UIView().funcZoomInOut(image: UIImage(named:"download")!)
-
+            UIView().funcZoomInOut(image: UIImage(named:"download")!, crossImage: UIImage(named:"cross_icon")!)
+            
         case 3:
             let vc = (self.storyboard?.instantiateViewController(withIdentifier: "tutorial_vc"))!
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
 
+        case 4:
+            ILocationPermission.sharedInstance.getCurrentLocation(target: self, userLocationClosure: { (userLocationArray: NSArray) in
+                let cllocation = userLocationArray.lastObject as! CLLocation
+                let latitude = cllocation.coordinate.latitude
+                let longitude = cllocation.coordinate.longitude
+                
+                let alert = UIAlertController.init(title: "Current Location :", message: "latitude \(latitude) \n longitude \(longitude)" , preferredStyle: .alert)
+                alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            })
+            
         case 5:
             generateCrashLogs()
             
@@ -76,8 +86,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
             
-        default:
-            break;
+        case 8:
+            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "activityLoaderVC"))!
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.present(navigationController, animated: true, completion: nil)
+
+        default: break
         }
     }
     
