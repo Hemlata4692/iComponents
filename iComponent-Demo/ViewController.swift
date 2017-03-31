@@ -7,63 +7,39 @@
 //
 
 import UIKit
+import iComponents
 
-enum componentViews {
-    case GestureAnimationView
-    case ImageCropperView
-}
+class ViewController: UIViewController, IlocationPermissionDelegate {
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    //Constans
-    //This will use for navigate on the specific component
-    let GestureAnimation = "GestureAnimation"   // 0 row
-    let imageCropper = "ImageCropper"           // 1 row
-    var componentArray = Array<String>()
-    var viewDict : Dictionary = [String:UIViewController]()
-    @IBOutlet weak var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        componentArray = [GestureAnimation,imageCropper]
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        // Code Snippet to access Reachability shared instance
+        // Reachability.sharedInstance
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        IlocationPermission.sharedInstance.locationDelegate = self
+        IlocationPermission.sharedInstance.getLocation(target: self)
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return componentArray.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = componentArray[indexPath.row]
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedView = componentArray[indexPath.row]
-        navigateViewController(controller: selectedView)
 
+    @IBAction func zoomInOut(_ sender: Any) {
+        UIView().funcZoomInOut(image: UIImage(named:"download")!)
     }
     
-    func navigateViewController(controller: String)  {
-        switch controller {
-        case GestureAnimation:
-            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: controller) as! GestureTableViewController
-            self.navigationController?.pushViewController(nextViewController, animated: true)
-            
-        
-        default:
-            print("bye")
-        }
+    public func updateLocation(locationsArray: NSArray) {
+        print("Current Location Cordinate: \(locationsArray.lastObject!)")
+        IlocationPermission.sharedInstance.stopLocation()
     }
 }
 

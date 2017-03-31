@@ -7,53 +7,71 @@
 //
 
 import UIKit
+/**
+ ZoomInOut class is for dispaly full view of image and zoom it.
+ */
 
 class ZoomInOut{
     
+    // The imageView for Zoom In/Out.
     var imageView = UIImageView()
+    
+    // The Scroll view for Zoom In/Out contain imageView.
     let scrollViewForImage: UIScrollView = UIScrollView()
-    var DoubleTapped : Bool = false
+    
+    // The Boolean variable for determine whether image is zoomed by double tap.
+    var doubleTapped : Bool = false
+    
+    // The frame of screen.
     let frame = UIScreen.main.bounds
     
-    static let instance = ZoomInOut()
+    // The singlton variable of class "ZoomInOut".
+    static let sharedInstance = ZoomInOut()
 }
 
 extension UIView {
     
-    public func funcZoomInOut(image: UIImage) {
+    /**
+     Setup view for Zoom In/Out and load that view on window.
+     
+     - parameter image: The image which will Zoom In/Out.
+     */
+    public func funcZoomInOut(image: UIImage, crossImage: UIImage) {
         // set up view
         self.frame = UIScreen.main.bounds
         self.backgroundColor = UIColor.black
         
-        // Create scroll View
-        self.setDelegate()
-        ZoomInOut.instance.scrollViewForImage.frame = CGRect(x:0, y:0, width:ZoomInOut.instance.frame.width, height:ZoomInOut.instance.frame.height-60)
-        ZoomInOut.instance.scrollViewForImage.backgroundColor = UIColor.black
-        ZoomInOut.instance.scrollViewForImage.alwaysBounceVertical = false
-        ZoomInOut.instance.scrollViewForImage.alwaysBounceHorizontal = false
-        ZoomInOut.instance.scrollViewForImage.minimumZoomScale = 1.0
-        ZoomInOut.instance.scrollViewForImage.maximumZoomScale = 10.0
-        self.addSubview(ZoomInOut.instance.scrollViewForImage)
+        /// Create ScrollView for view which contain imageView
+
+        ZoomInOut.sharedInstance.scrollViewForImage.delegate = self
+        ZoomInOut.sharedInstance.scrollViewForImage.frame = CGRect(x:0, y:0, width:ZoomInOut.sharedInstance.frame.width, height:ZoomInOut.sharedInstance.frame.height-60)
+        ZoomInOut.sharedInstance.scrollViewForImage.backgroundColor = UIColor.black
+        ZoomInOut.sharedInstance.scrollViewForImage.alwaysBounceVertical = false
+        ZoomInOut.sharedInstance.scrollViewForImage.alwaysBounceHorizontal = false
+        ZoomInOut.sharedInstance.scrollViewForImage.minimumZoomScale = 1.0
+        ZoomInOut.sharedInstance.scrollViewForImage.maximumZoomScale = 10.0
+        
+        self.addSubview(ZoomInOut.sharedInstance.scrollViewForImage)
         
         // Setup Image on scroll
-        ZoomInOut.instance.imageView.frame = CGRect(x:0, y:100, width:ZoomInOut.instance.frame.width, height:ZoomInOut.instance.scrollViewForImage.frame.height-200)
-        ZoomInOut.instance.imageView.image = image
-        ZoomInOut.instance.imageView.isUserInteractionEnabled=true
-        ZoomInOut.instance.imageView.layer.cornerRadius = 11.0
-        ZoomInOut.instance.imageView.contentMode = .scaleAspectFit
-        ZoomInOut.instance.imageView.clipsToBounds = false
-        ZoomInOut.instance.scrollViewForImage.addSubview(ZoomInOut.instance.imageView)
+        ZoomInOut.sharedInstance.imageView.frame = CGRect(x:0, y:100, width:ZoomInOut.sharedInstance.frame.width, height:ZoomInOut.sharedInstance.scrollViewForImage.frame.height-200)
+        ZoomInOut.sharedInstance.imageView.image = image
+        ZoomInOut.sharedInstance.imageView.isUserInteractionEnabled=true
+        ZoomInOut.sharedInstance.imageView.layer.cornerRadius = 11.0
+        ZoomInOut.sharedInstance.imageView.contentMode = .scaleAspectFit
+        ZoomInOut.sharedInstance.imageView.clipsToBounds = false
+        ZoomInOut.sharedInstance.scrollViewForImage.addSubview(ZoomInOut.sharedInstance.imageView)
         
         // Assign tap gesture on image view
         let doubleTapGesture = UITapGestureRecognizer()
         doubleTapGesture.numberOfTapsRequired = 2
         doubleTapGesture.addTarget(self, action: #selector(tappedOnImageView))
-        ZoomInOut.instance.imageView.addGestureRecognizer(doubleTapGesture)
+        ZoomInOut.sharedInstance.imageView.addGestureRecognizer(doubleTapGesture)
         
         // Create Close button on scroll
         let closeButton = UIButton()
         closeButton.frame = CGRect(x: self.frame.size.width/2 - 20, y: self.frame.size.height-50, width: 40, height: 40)
-        closeButton.setImage(UIImage(named: "cross_icon"), for: .normal)
+        closeButton.setImage(crossImage, for: .normal)
         closeButton.setTitleColor(UIColor.white, for: .normal)
         closeButton.titleLabel?.textAlignment = .center
         closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
@@ -61,9 +79,13 @@ extension UIView {
         closeButton.addTarget(self, action: #selector(removeZoomViewFromWindow), for: .touchUpInside)
         self.addSubview(closeButton)
         
+        // load created Zoom In/Out view on window with animation.
         loadZoomViewOnWindow()
     }
     
+    /**
+      Load the Zoom In/Out view on window with bounce animation.
+     */
     func loadZoomViewOnWindow() {
         if let window = UIApplication.shared.keyWindow {
             self.alpha = 0
@@ -75,26 +97,32 @@ extension UIView {
             bounceAnimation.keyTimes = [0.0, 0.5, 1.0]
             bounceAnimation.duration = 0.4
             self.layer.add(bounceAnimation, forKey: "bounce")
+            
             window.addSubview(self)
         }
     }
     
+    /**
+     Return zoomed image on double tap.
+     
+     - parameter recognizer: tap gesture object.
+     */
     func tappedOnImageView(recognizer: UITapGestureRecognizer){
-        let pointInView = recognizer.location(in: ZoomInOut.instance.imageView)
+        let pointInView = recognizer.location(in: ZoomInOut.sharedInstance.imageView)
         var newZoomScale : CGFloat
         
-        if !ZoomInOut.instance.DoubleTapped{
-            ZoomInOut.instance.DoubleTapped = true
-            newZoomScale = ZoomInOut.instance.scrollViewForImage.zoomScale * 3.5
+        if !ZoomInOut.sharedInstance.doubleTapped{
+            ZoomInOut.sharedInstance.doubleTapped = true
+            newZoomScale = ZoomInOut.sharedInstance.scrollViewForImage.zoomScale * 3.5
         } else
         {
-            ZoomInOut.instance.DoubleTapped = false
+            ZoomInOut.sharedInstance.doubleTapped = false
             newZoomScale = CGFloat(1.0)
         }
         
-        newZoomScale = min(newZoomScale, ZoomInOut.instance.scrollViewForImage.maximumZoomScale)
+        newZoomScale = min(newZoomScale, ZoomInOut.sharedInstance.scrollViewForImage.maximumZoomScale)
         
-        let scrollViewSize = ZoomInOut.instance.scrollViewForImage.bounds.size
+        let scrollViewSize = ZoomInOut.sharedInstance.scrollViewForImage.bounds.size
         let w = scrollViewSize.width / newZoomScale
         let h = scrollViewSize.height / newZoomScale
         let x1 = pointInView.x - (w / 2.0)
@@ -102,9 +130,12 @@ extension UIView {
         
         let rectToZoomTo = CGRect(x: x1, y: y1, width: w, height: h)
         
-        ZoomInOut.instance.scrollViewForImage.zoom(to: rectToZoomTo, animated: true)
+        ZoomInOut.sharedInstance.scrollViewForImage.zoom(to: rectToZoomTo, animated: true)
     }
     
+    /**
+     Remove the loaded  Zoom In/Out view from window.
+     */
     func removeZoomViewFromWindow() {
         self.alpha = 1.0
         UIView.animate(withDuration: 0.1, animations: {
@@ -115,17 +146,24 @@ extension UIView {
         bounceAnimation.keyTimes = [0.0, 0.5, 1.0]
         bounceAnimation.duration = 0.3
         self.layer.add(bounceAnimation, forKey: "bounce")
+        
         self.removeFromSuperview()
     }
 }
 
 extension UIView: UIScrollViewDelegate {
     
-    func setDelegate() {
-        ZoomInOut.instance.scrollViewForImage.delegate = self
-    }
+  
     
+    //MARK:- ScrollView Delegate
+    
+    /**
+    Return A UIView object that will be scaled as a result of the zooming gesture. Return nil if you don’t want zooming to occur.
+     
+     - parameter  scrollView :  The scroll-view object displaying the content view.
+     */
+
     public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return ZoomInOut.instance.imageView
+        return ZoomInOut.sharedInstance.imageView
     }
 }
