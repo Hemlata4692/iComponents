@@ -1,5 +1,5 @@
 //
-//  IC_ToastView.swift
+//  ICToastView.swift
 //  iComponents
 //
 //  Created by Mradul Mathur on 28/03/17.
@@ -42,7 +42,7 @@ public extension UIViewController {
         label.text = text
         label.sizeToFit()
         return label.frame.height > 100 ? 100 : label.frame.height
-    } 
+    }
     //Code snippet to get message actual width
     public func getLabelWidth(text:String, font:UIFont, width:CGFloat) -> CGFloat {
         let dummyLabel = UILabel.init()
