@@ -13,8 +13,8 @@ import iComponents
 class HomeViewController: iComponentsViewController {
 
     @IBOutlet weak var componentsTableView: UITableView!
-        
-    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example","Image Resize Example", "TextView Placeholder Example","Custom Loader Example"]
+    
+    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example","Image Resize Example", "TextView Placeholder Example","Custom Loader Example","Gesture Animation Example"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +90,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let vc = (self.storyboard?.instantiateViewController(withIdentifier: "activityLoaderVC"))!
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
-
-        default: break
+            
+        case 9:
+            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "GestureAnimation_vc"))!
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.present(navigationController, animated: true, completion: nil)
+        
+        default:
+            break;
         }
     }
     
