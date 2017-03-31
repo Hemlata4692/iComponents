@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 
 class GestureTableViewController: UITableViewController {
-    let gestureTable = ["singleTap","RightSwipe","LeftSwipe"]
+    let gestureTable = ["singleTap","RightSwipe","LeftSwipe", "FlipAnimation"]
     
     override func viewDidLoad() {
-      
+        let backBtn =  addBackBtn()
+        backBtn.addTarget(self, action: #selector(actionBackButton), for: .touchUpInside)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,5 +39,16 @@ class GestureTableViewController: UITableViewController {
 //        self.present(nextViewController, animated:true, completion:nil)
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
-    
+    public func addBackBtn() -> UIButton {
+        let leftBarBtn = UIButton()
+        leftBarBtn.setImage(UIImage(named: "back"), for: .normal)
+        leftBarBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        leftBarBtn.setTitleColor(UIColor.black, for: .normal)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView:  leftBarBtn)
+        return leftBarBtn
+    }
+    func actionBackButton() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }

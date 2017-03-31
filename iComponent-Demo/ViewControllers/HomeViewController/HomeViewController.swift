@@ -13,8 +13,7 @@ class HomeViewController: iComponentsViewController {
 
     @IBOutlet weak var componentsTableView: UITableView!
     
-    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example","Gesture Animation Example"]
-
+    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example","Image Resize Example", "TextView Placeholder Example","Gesture Animation Example"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +66,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             generateCrashLogs()
             
         case 6:
+            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "imageVC"))!
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.present(navigationController, animated: true, completion: nil)
+            
+        case 7:
+            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "textViewVC"))!
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.present(navigationController, animated: true, completion: nil)
+            
+        case 8:
             let vc = (self.storyboard?.instantiateViewController(withIdentifier: "GestureAnimation_vc"))!
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)

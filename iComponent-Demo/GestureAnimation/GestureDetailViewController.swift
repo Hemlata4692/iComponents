@@ -53,7 +53,7 @@ class GestureDetailViewController : UIViewController {
             tomImgView.addSingleTapGestureWithResponder { (single) in
                 self.tomImgView.zoomIn()
             }
-        case "RightSwipe":
+        case "FlipAnimation":
             jerryImgView.addRightSwipeGestureWithResponder { (swipe) in
                 self.jerryImgView.flipWitAnimationImage(direction: UIView.Direction.right, currentImage: self.tomImg, flipWithImage: self.jerryImg)
             }
@@ -61,10 +61,10 @@ class GestureDetailViewController : UIViewController {
                 self.tomImgView.flipWitAnimationImage(direction: UIView.Direction.top, currentImage: self.tomImg, flipWithImage: self.jerryImg)
             }
             label.addRightSwipeGestureWithResponder { (rightSwipe) in
-                self.label.flipWitAnimation(direction: UIView.Direction.left, currentString: "Label", flipWithString: "Label Swiped")
+                self.label.flipWitAnimation(direction: UIView.Direction.left, currentString: "Label", flipWithString: "Label flipped")
             }
             Btn.addRightSwipeGestureWithResponder { (rightSwipe) in
-                self.Btn.flipWitAnimation(direction: UIView.Direction.bottom, currentString: "Button", flipWithString: "Button Swiped")
+                self.Btn.flipWitAnimation(direction: UIView.Direction.bottom, currentString: "Button", flipWithString: "Button flipped")
             }
         case "LeftSwipe":
             label.isHidden = true
@@ -74,6 +74,15 @@ class GestureDetailViewController : UIViewController {
             jerryImgView.addLeftSwipeGestureWithResponder { (swipeLeft) in
                 self.jerryImgView.image = self.jerryImgView.image == self.tomImg ? self.jerryImg : self.tomImg
             }
+            
+        case "RightSwipe":
+            label.isHidden = true
+            Btn.isHidden = true
+            tomImgView.isHidden = true
+            jerryImgView.center = self.view.center
+            jerryImgView.addRightSwipeGestureWithResponder(responder: { (swipeRight) in
+                self.jerryImgView.image = self.jerryImgView.image == self.tomImg ? self.jerryImg : self.tomImg
+            })
             
         default:
             label.isHidden = true

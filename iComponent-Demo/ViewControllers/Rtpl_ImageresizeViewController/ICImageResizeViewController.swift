@@ -10,7 +10,7 @@ import Foundation
 import iComponents
 import UIKit
 
-class ICImageResizeViewController: UIViewController {
+class ICImageResizeViewController: iComponentsViewController {
     @IBOutlet weak var imageViewBeforeCompression:          UIImageView!
     @IBOutlet weak var labelToshowSizeBeforeCompreesion:    UILabel!
     @IBOutlet weak var labelToshowSizeAfterCompreesion:     UILabel!
@@ -19,12 +19,19 @@ class ICImageResizeViewController: UIViewController {
     
     @IBAction func btnClicked() {
         self.createAndCallPicker()
-}
+    }
+    
+    func actionBackButton() {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        let backBtn =  addBackBtn()
+        backBtn.addTarget(self, action: #selector(actionBackButton), for: .touchUpInside)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,8 +41,8 @@ class ICImageResizeViewController: UIViewController {
     
 }
 
- extension ICImageResizeViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+extension ICImageResizeViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         picker.dismiss(animated: true, completion: nil)
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
@@ -90,5 +97,5 @@ class ICImageResizeViewController: UIViewController {
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-
+    
 }
