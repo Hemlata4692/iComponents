@@ -53,9 +53,9 @@
 		A677B9FC1E7BEEB0003D120D /* iTextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677B9FA1E7BEEB0003D120D /* iTextfieldExtension.swift */; };
 		D05F609F1E8E69540024FF4A /* ICToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F609E1E8E69540024FF4A /* ICToastView.swift */; };
 		D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D2461E40B1E800D1371B /* iReachability.swift */; };
+		E0E8CF391E8E87690004068D /* GestureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF371E8E87690004068D /* GestureDetailViewController.swift */; };
+		E0E8CF3A1E8E87690004068D /* GestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF381E8E87690004068D /* GestureTableViewController.swift */; };
 		E0E948A71E4AED0C004FE734 /* GesturAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */; };
-		E0E9991B1E67F51F005C1EFD /* GestureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E999191E67F51F005C1EFD /* GestureDetailViewController.swift */; };
-		E0E9991C1E67F51F005C1EFD /* GestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E9991A1E67F51F005C1EFD /* GestureTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,9 +124,9 @@
 		A677B9FA1E7BEEB0003D120D /* iTextfieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextfieldExtension.swift; sourceTree = "<group>"; };
 		D05F609E1E8E69540024FF4A /* ICToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICToastView.swift; sourceTree = "<group>"; };
 		D0F9D2461E40B1E800D1371B /* iReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iReachability.swift; sourceTree = "<group>"; };
+		E0E8CF371E8E87690004068D /* GestureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDetailViewController.swift; sourceTree = "<group>"; };
+		E0E8CF381E8E87690004068D /* GestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewController.swift; sourceTree = "<group>"; };
 		E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturAnimation.swift; sourceTree = "<group>"; };
-		E0E999191E67F51F005C1EFD /* GestureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDetailViewController.swift; sourceTree = "<group>"; };
-		E0E9991A1E67F51F005C1EFD /* GestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +191,7 @@
 		747375A61E7FDA6F000D0743 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0E8CF361E8E87690004068D /* GestureAnimation */,
 				747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */,
 				691861861E86507800963D1F /* Rtpl_ImageresizeViewController */,
 				691861811E864D2300963D1F /* Rtpl_textViewPlaceHolder */,
@@ -291,7 +292,6 @@
 		8C79A6FD1E48851B00907D21 /* iComponent-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				E0E999181E67F51F005C1EFD /* GestureAnimation */,
 				747375A61E7FDA6F000D0743 /* ViewControllers */,
 				8C79A6FE1E48851B00907D21 /* AppDelegate.swift */,
 				8C79A7021E48851B00907D21 /* Main.storyboard */,
@@ -302,19 +302,21 @@
 			path = "iComponent-Demo";
 			sourceTree = "<group>";
 		};
-		E0E999181E67F51F005C1EFD /* GestureAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				E0E999191E67F51F005C1EFD /* GestureDetailViewController.swift */,
-				E0E9991A1E67F51F005C1EFD /* GestureTableViewController.swift */,
-			);
-			path = GestureAnimation;
 		D05F609D1E8E69540024FF4A /* ICToastView */ = {
 			isa = PBXGroup;
 			children = (
 				D05F609E1E8E69540024FF4A /* ICToastView.swift */,
 			);
 			path = ICToastView;
+			sourceTree = "<group>";
+		};
+		E0E8CF361E8E87690004068D /* GestureAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E0E8CF371E8E87690004068D /* GestureDetailViewController.swift */,
+				E0E8CF381E8E87690004068D /* GestureTableViewController.swift */,
+			);
+			path = GestureAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,10 +526,10 @@
 				747375B11E7FF34F000D0743 /* AppTutorialViewController.swift in Sources */,
 				693BA3541E8D0DE400C8756A /* ICImageResizeViewController.swift in Sources */,
 				693BA3581E8D10C500C8756A /* ICTextViewPlaceHolder.swift in Sources */,
+				E0E8CF3A1E8E87690004068D /* GestureTableViewController.swift in Sources */,
 				747375A81E7FDAC4000D0743 /* iComponentsViewController.swift in Sources */,
 				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
-				E0E9991C1E67F51F005C1EFD /* GestureTableViewController.swift in Sources */,
-				E0E9991B1E67F51F005C1EFD /* GestureDetailViewController.swift in Sources */,
+				E0E8CF391E8E87690004068D /* GestureDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

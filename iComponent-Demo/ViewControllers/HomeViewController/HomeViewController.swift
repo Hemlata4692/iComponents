@@ -87,12 +87,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(navigationController, animated: true, completion: nil)
             
         case 8:
-            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "GestureAnimation_vc"))!
+            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "activityLoaderVC"))!
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
             
         case 9:
-            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "activityLoaderVC"))!
+            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "GestureAnimation_vc"))!
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
         
