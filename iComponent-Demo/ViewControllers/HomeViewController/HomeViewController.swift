@@ -13,13 +13,8 @@ import iComponents
 class HomeViewController: iComponentsViewController {
 
     @IBOutlet weak var componentsTableView: UITableView!
-    
-    var activityIndicator    : CustomActivityIndicatorView!
-    var loaderTimer          : Timer?
-    var loadedFileCount      = 0
-    let noOfFiles            = 4
-    
-    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example","Image Resize Example", "TextView Placeholder Example","Custom Loader With App Icon", "Custorm Loader With Progress"]
+        
+    let componentsArray: [String] = ["Reachability Example","iTextField Example","Zoom In/Out Example","App Tutorial Example","iLocation Example","DLog Example","Image Resize Example", "TextView Placeholder Example","Custom Loader Example"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +63,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(navigationController, animated: true, completion: nil)
 
         case 4:
-            IlocationPermission.sharedInstance.getCurrentLocation(target: self, userLocationClosure: { (userLocationArray: NSArray) in
+            ILocationPermission.sharedInstance.getCurrentLocation(target: self, userLocationClosure: { (userLocationArray: NSArray) in
                 let cllocation = userLocationArray.lastObject as! CLLocation
                 let latitude = cllocation.coordinate.latitude
                 let longitude = cllocation.coordinate.longitude
@@ -92,17 +87,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(navigationController, animated: true, completion: nil)
             
         case 8:
-            activityIndicator = CustomActivityIndicatorView.init (loaderActivityType: .KMLoaderWithAppIcon,loaderActivityPresentType: .KMPresentOnView, target: self, appImage: UIImage(named:"appicon")!, loadingImage: UIImage(named:"Loader")!, loadingText: "Loading...", textColor: UIColor.black, textFont: UIFont.systemFont(ofSize: 13), strokeColor: UIColor.red, strokeWidth:  5.0, percent: 0.0)
-            activityIndicator.startAnimating()
-            loaderTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(stopLoader), userInfo: nil, repeats: true)
+            let vc = (self.storyboard?.instantiateViewController(withIdentifier: "activityLoaderVC"))!
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.present(navigationController, animated: true, completion: nil)
 
-        case 9:
-            activityIndicator = CustomActivityIndicatorView.init(loaderActivityType: .KMLoaderWithProgress ,loaderActivityPresentType: .KMPresentOnWindow, target: self, appImage: UIImage(named:"appicon")!, loadingImage: UIImage(named:"Loader")!, loadingText:  "loading... \(loadedFileCount) / \(noOfFiles)", textColor: UIColor.black, textFont: UIFont.systemFont(ofSize: 13), strokeColor: UIColor.purple, strokeWidth:  5.0, percent: 0.0)
-            
-            activityIndicator.startAnimating()
-            
-            loaderTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.increamentSpin), userInfo: nil, repeats: true)
-            
         default: break
         }
     }
@@ -139,28 +127,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         // Clear log file content
         // Logs.clearContentsOfResponseLogFile()
     }
-    
-    func increamentSpin() {
-        //          increament our percentage, do so, and redraw the view
-        
-        let incrementPercentag = 100 / noOfFiles
-        if Double(activityIndicator.percent) < 100.0 {
-            loadedFileCount += 1
-            activityIndicator.percent = activityIndicator.percent + Double(incrementPercentag)
-            activityIndicator.loadingText = "loading... \(loadedFileCount) / \(noOfFiles)"
-            activityIndicator.setNeedsDisplay()
-        }
-        else {
-            loadedFileCount = 0
-            stopLoader()
-        }
-    }
-    
-    func stopLoader() {
-        loaderTimer?.invalidate()
-        loaderTimer = nil
-        activityIndicator.stopAnimating()
-
-    }
-    
 }

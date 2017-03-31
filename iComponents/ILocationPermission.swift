@@ -1,5 +1,5 @@
 //
-//  IlocationPermission.swift
+//  ILocationPermission.swift
 //  imReporter
 //
 //  Created by Kritika Middha on 16/03/17.
@@ -15,17 +15,17 @@ private let locationServiceAlertTittle              = "Location Service Disabled
 private let locationServiceAlertMessage: String     = "Your location service is not enabled for the app. \nTo enable go Setting > %@ > Location, then enable it."
 
 /**
- IlocationPermission class is for get current location of user.
+ ILocationPermission class is for get current location of user.
  */
 
 
-public class IlocationPermission: NSObject {
+public class ILocationPermission: NSObject {
     
     /// Location manager variable.
     var locationManager : CLLocationManager?
     
     /// Instance variable of "IlocationPermission" class.
-    public static let sharedInstance = IlocationPermission.init()
+    public static let sharedInstance = ILocationPermission.init()
     var locationManagerClosures: [((_ userLocationArray: NSArray) -> ())] = []
     
     /**
@@ -49,7 +49,7 @@ public class IlocationPermission: NSObject {
     /**
      Check location manager's service status and authorization status.
 
-     - parameter delegate: refrence of view controller for IlocationPermissionDelegate delegate object .
+     - parameter delegate: refrence of view controller for ILocationPermissionDelegate delegate object .
      */
     public func getCurrentLocation(target: UIViewController, userLocationClosure: @escaping ((_ userLocationArray: NSArray) -> ())) {
         self.locationManagerClosures.append(userLocationClosure)
@@ -99,7 +99,7 @@ public class IlocationPermission: NSObject {
     }
 }
 
-extension IlocationPermission: CLLocationManagerDelegate {
+extension ILocationPermission: CLLocationManagerDelegate {
 
     // CLLocation Manager delegates
     /**
