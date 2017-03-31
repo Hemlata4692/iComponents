@@ -21,12 +21,28 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */; };
+		691861801E864D1300963D1F /* RtplTextViewPlaceHolderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6918617F1E864D1300963D1F /* RtplTextViewPlaceHolderClass.swift */; };
+		691861851E864FE300963D1F /* RtplImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691861841E864FE300963D1F /* RtplImageResize.swift */; };
+		693BA3541E8D0DE400C8756A /* ICImageResizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BA3531E8D0DE400C8756A /* ICImageResizeViewController.swift */; };
+		693BA3581E8D10C500C8756A /* ICTextViewPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BA3571E8D10C500C8756A /* ICTextViewPlaceHolder.swift */; };
+		69713FCD1E87968100FFE098 /* RtplStringvalidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69713FCC1E87968100FFE098 /* RtplStringvalidation.swift */; };
+		7412F33B1E8001AB009D8382 /* TutorialView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 747375BE1E7FFCEC000D0743 /* TutorialView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		7412F3611E84120D009D8382 /* NSLog+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7412F3601E84120D009D8382 /* NSLog+Debug.swift */; };
+		747375A81E7FDAC4000D0743 /* iComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */; };
+		747375AB1E7FE064000D0743 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375AA1E7FE064000D0743 /* HomeViewController.swift */; };
+		747375AE1E7FE89C000D0743 /* iTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375AD1E7FE89C000D0743 /* iTextFieldViewController.swift */; };
+		747375B11E7FF34F000D0743 /* AppTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375B01E7FF34F000D0743 /* AppTutorialViewController.swift */; };
+		747375B31E7FF3B7000D0743 /* FrontTutorialAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747375B21E7FF3B7000D0743 /* FrontTutorialAssets.xcassets */; };
+		747375B51E7FF889000D0743 /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
+		747375B61E7FF889000D0743 /* iComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		747375C21E7FFCEC000D0743 /* TutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747375BF1E7FFCEC000D0743 /* TutorialView.xib */; };
+		747375E51E7FFF90000D0743 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747375BE1E7FFCEC000D0743 /* TutorialView.swift */; };
 		8C61DD891E260590007BCB2D /* iComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61DD7F1E26058F007BCB2D /* iComponents.framework */; };
 		8C61DD8E1E260590007BCB2D /* iComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD8D1E260590007BCB2D /* iComponentsTests.swift */; };
 		8C61DD901E260590007BCB2D /* iComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C61DD821E26058F007BCB2D /* iComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61DD9F1E260CD2007BCB2D /* iCache.swift */; };
 		8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A6FE1E48851B00907D21 /* AppDelegate.swift */; };
-		8C79A7011E48851B00907D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A7001E48851B00907D21 /* ViewController.swift */; };
 		8C79A7041E48851B00907D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7021E48851B00907D21 /* Main.storyboard */; };
 		8C79A7061E48851B00907D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7051E48851B00907D21 /* Assets.xcassets */; };
 		8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */; };
@@ -35,17 +51,20 @@
 		E0E948A71E4AED0C004FE734 /* GesturAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */; };
 		E0E9991B1E67F51F005C1EFD /* GestureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E999191E67F51F005C1EFD /* GestureDetailViewController.swift */; };
 		E0E9991C1E67F51F005C1EFD /* GestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E9991A1E67F51F005C1EFD /* GestureTableViewController.swift */; };
+		A677B9FB1E7BEEB0003D120D /* iStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677B9F91E7BEEB0003D120D /* iStringExtension.swift */; };
+		A677B9FC1E7BEEB0003D120D /* iTextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677B9FA1E7BEEB0003D120D /* iTextfieldExtension.swift */; };
+		D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D2461E40B1E800D1371B /* iReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8C61DD8A1E260590007BCB2D /* PBXContainerItemProxy */ = {
+		747375B71E7FF889000D0743 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8C61DD761E26058F007BCB2D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8C61DD7E1E26058F007BCB2D;
 			remoteInfo = iComponents;
 		};
-		8C79A7101E48852300907D21 /* PBXContainerItemProxy */ = {
+		8C61DD8A1E260590007BCB2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8C61DD761E26058F007BCB2D /* Project object */;
 			proxyType = 1;
@@ -55,13 +74,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8C79A7121E48852300907D21 /* Embed Frameworks */ = {
+		747375B91E7FF88A000D0743 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8C79A70F1E48852300907D21 /* iComponents.framework in Embed Frameworks */,
+				747375B61E7FF889000D0743 /* iComponents.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +88,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomInOut.swift; sourceTree = "<group>"; };
+		6918617F1E864D1300963D1F /* RtplTextViewPlaceHolderClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RtplTextViewPlaceHolderClass.swift; sourceTree = "<group>"; };
+		691861841E864FE300963D1F /* RtplImageResize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RtplImageResize.swift; sourceTree = "<group>"; };
+		693BA3531E8D0DE400C8756A /* ICImageResizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICImageResizeViewController.swift; sourceTree = "<group>"; };
+		693BA3571E8D10C500C8756A /* ICTextViewPlaceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTextViewPlaceHolder.swift; sourceTree = "<group>"; };
+		69713FCC1E87968100FFE098 /* RtplStringvalidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RtplStringvalidation.swift; sourceTree = "<group>"; };
+		7412F3601E84120D009D8382 /* NSLog+Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLog+Debug.swift"; sourceTree = "<group>"; };
+		747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iComponentsViewController.swift; sourceTree = "<group>"; };
+		747375AA1E7FE064000D0743 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		747375AD1E7FE89C000D0743 /* iTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextFieldViewController.swift; sourceTree = "<group>"; };
+		747375B01E7FF34F000D0743 /* AppTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTutorialViewController.swift; sourceTree = "<group>"; };
+		747375B21E7FF3B7000D0743 /* FrontTutorialAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FrontTutorialAssets.xcassets; sourceTree = "<group>"; };
+		747375BE1E7FFCEC000D0743 /* TutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		747375BF1E7FFCEC000D0743 /* TutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialView.xib; sourceTree = "<group>"; };
 		8C61DD7F1E26058F007BCB2D /* iComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C61DD821E26058F007BCB2D /* iComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iComponents.h; sourceTree = "<group>"; };
 		8C61DD831E26058F007BCB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,7 +111,6 @@
 		8C61DD9F1E260CD2007BCB2D /* iCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCache.swift; sourceTree = "<group>"; };
 		8C79A6FC1E48851B00907D21 /* iComponent-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iComponent-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C79A6FE1E48851B00907D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C79A7001E48851B00907D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C79A7031E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C79A7051E48851B00907D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C79A7081E48851B00907D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +118,9 @@
 		E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturAnimation.swift; sourceTree = "<group>"; };
 		E0E999191E67F51F005C1EFD /* GestureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDetailViewController.swift; sourceTree = "<group>"; };
 		E0E9991A1E67F51F005C1EFD /* GestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewController.swift; sourceTree = "<group>"; };
+		A677B9F91E7BEEB0003D120D /* iStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iStringExtension.swift; sourceTree = "<group>"; };
+		A677B9FA1E7BEEB0003D120D /* iTextfieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTextfieldExtension.swift; sourceTree = "<group>"; };
+		D0F9D2461E40B1E800D1371B /* iReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +143,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C79A70E1E48852300907D21 /* iComponents.framework in Frameworks */,
+				747375B51E7FF889000D0743 /* iComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		691861811E864D2300963D1F /* Rtpl_textViewPlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				693BA3571E8D10C500C8756A /* ICTextViewPlaceHolder.swift */,
+			);
+			path = Rtpl_textViewPlaceHolder;
+			sourceTree = "<group>";
+		};
+		691861861E86507800963D1F /* Rtpl_ImageresizeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				693BA3531E8D0DE400C8756A /* ICImageResizeViewController.swift */,
+			);
+			path = Rtpl_ImageresizeViewController;
+			sourceTree = "<group>";
+		};
+		7412F35F1E84120D009D8382 /* CustomLogger */ = {
+			isa = PBXGroup;
+			children = (
+				7412F3601E84120D009D8382 /* NSLog+Debug.swift */,
+			);
+			path = CustomLogger;
+			sourceTree = "<group>";
+		};
+		747375A61E7FDA6F000D0743 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */,
+				691861861E86507800963D1F /* Rtpl_ImageresizeViewController */,
+				691861811E864D2300963D1F /* Rtpl_textViewPlaceHolder */,
+				747375A91E7FE027000D0743 /* HomeViewController */,
+				747375AC1E7FE5DD000D0743 /* iTextFieldViewController */,
+				747375AF1E7FF336000D0743 /* AppTutorialViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		747375A91E7FE027000D0743 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				747375AA1E7FE064000D0743 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		747375AC1E7FE5DD000D0743 /* iTextFieldViewController */ = {
+			isa = PBXGroup;
+			children = (
+				747375AD1E7FE89C000D0743 /* iTextFieldViewController.swift */,
+			);
+			path = iTextFieldViewController;
+			sourceTree = "<group>";
+		};
+		747375AF1E7FF336000D0743 /* AppTutorialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				747375B01E7FF34F000D0743 /* AppTutorialViewController.swift */,
+				747375B21E7FF3B7000D0743 /* FrontTutorialAssets.xcassets */,
+			);
+			path = AppTutorialViewController;
+			sourceTree = "<group>";
+		};
+		747375BC1E7FFCEC000D0743 /* FrontTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				747375BE1E7FFCEC000D0743 /* TutorialView.swift */,
+				747375BF1E7FFCEC000D0743 /* TutorialView.xib */,
+			);
+			path = FrontTutorial;
+			sourceTree = "<group>";
+		};
 		8C61DD751E26058F007BCB2D = {
 			isa = PBXGroup;
 			children = (
@@ -138,10 +244,19 @@
 		8C61DD811E26058F007BCB2D /* iComponents */ = {
 			isa = PBXGroup;
 			children = (
+				6918617F1E864D1300963D1F /* RtplTextViewPlaceHolderClass.swift */,
+				7412F35F1E84120D009D8382 /* CustomLogger */,
+				747375BC1E7FFCEC000D0743 /* FrontTutorial */,
+				A677B9F91E7BEEB0003D120D /* iStringExtension.swift */,
+				A677B9FA1E7BEEB0003D120D /* iTextfieldExtension.swift */,
 				8C61DD821E26058F007BCB2D /* iComponents.h */,
 				8C61DD831E26058F007BCB2D /* Info.plist */,
 				8C61DD9F1E260CD2007BCB2D /* iCache.swift */,
 				E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */,
+				15E26AFB1E6D83D9007E8471 /* ZoomInOut.swift */,
+				D0F9D2461E40B1E800D1371B /* iReachability.swift */,
+				691861841E864FE300963D1F /* RtplImageResize.swift */,
+				69713FCC1E87968100FFE098 /* RtplStringvalidation.swift */,
 			);
 			path = iComponents;
 			sourceTree = "<group>";
@@ -159,8 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				E0E999181E67F51F005C1EFD /* GestureAnimation */,
+				747375A61E7FDA6F000D0743 /* ViewControllers */,
 				8C79A6FE1E48851B00907D21 /* AppDelegate.swift */,
-				8C79A7001E48851B00907D21 /* ViewController.swift */,
 				8C79A7021E48851B00907D21 /* Main.storyboard */,
 				8C79A7051E48851B00907D21 /* Assets.xcassets */,
 				8C79A7071E48851B00907D21 /* LaunchScreen.storyboard */,
@@ -186,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C61DD901E260590007BCB2D /* iComponents.h in Headers */,
+				7412F33B1E8001AB009D8382 /* TutorialView.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,12 +351,12 @@
 				8C79A6F81E48851B00907D21 /* Sources */,
 				8C79A6F91E48851B00907D21 /* Frameworks */,
 				8C79A6FA1E48851B00907D21 /* Resources */,
-				8C79A7121E48852300907D21 /* Embed Frameworks */,
+				747375B91E7FF88A000D0743 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8C79A7111E48852300907D21 /* PBXTargetDependency */,
+				747375B81E7FF889000D0743 /* PBXTargetDependency */,
 			);
 			name = "iComponent-Demo";
 			productName = "iComponent-Demo";
@@ -259,8 +375,9 @@
 				TargetAttributes = {
 					8C61DD7E1E26058F007BCB2D = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6S3AL87NGN;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					8C61DD871E260590007BCB2D = {
 						CreatedOnToolsVersion = 8.2;
@@ -272,7 +389,8 @@
 					};
 					8C79A6FB1E48851B00907D21 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 6S3AL87NGN;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -302,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747375C21E7FFCEC000D0743 /* TutorialView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747375B31E7FF3B7000D0743 /* FrontTutorialAssets.xcassets in Resources */,
 				8C79A7091E48851B00907D21 /* LaunchScreen.storyboard in Resources */,
 				8C79A7061E48851B00907D21 /* Assets.xcassets in Resources */,
 				8C79A7041E48851B00907D21 /* Main.storyboard in Resources */,
@@ -345,8 +465,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691861801E864D1300963D1F /* RtplTextViewPlaceHolderClass.swift in Sources */,
+				691861851E864FE300963D1F /* RtplImageResize.swift in Sources */,
+				747375E51E7FFF90000D0743 /* TutorialView.swift in Sources */,
+				69713FCD1E87968100FFE098 /* RtplStringvalidation.swift in Sources */,
+				7412F3611E84120D009D8382 /* NSLog+Debug.swift in Sources */,
+				15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */,
+				D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */,
+				A677B9FB1E7BEEB0003D120D /* iStringExtension.swift in Sources */,
 				8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */,
 				E0E948A71E4AED0C004FE734 /* GesturAnimation.swift in Sources */,
+				A677B9FC1E7BEEB0003D120D /* iTextfieldExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +491,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C79A7011E48851B00907D21 /* ViewController.swift in Sources */,
+				747375AB1E7FE064000D0743 /* HomeViewController.swift in Sources */,
+				747375AE1E7FE89C000D0743 /* iTextFieldViewController.swift in Sources */,
+				747375B11E7FF34F000D0743 /* AppTutorialViewController.swift in Sources */,
+				693BA3541E8D0DE400C8756A /* ICImageResizeViewController.swift in Sources */,
+				693BA3581E8D10C500C8756A /* ICTextViewPlaceHolder.swift in Sources */,
+				747375A81E7FDAC4000D0743 /* iComponentsViewController.swift in Sources */,
 				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
 				E0E9991C1E67F51F005C1EFD /* GestureTableViewController.swift in Sources */,
 				E0E9991B1E67F51F005C1EFD /* GestureDetailViewController.swift in Sources */,
@@ -372,15 +506,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		747375B81E7FF889000D0743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C61DD7E1E26058F007BCB2D /* iComponents */;
+			targetProxy = 747375B71E7FF889000D0743 /* PBXContainerItemProxy */;
+		};
 		8C61DD8B1E260590007BCB2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8C61DD7E1E26058F007BCB2D /* iComponents */;
 			targetProxy = 8C61DD8A1E260590007BCB2D /* PBXContainerItemProxy */;
-		};
-		8C79A7111E48852300907D21 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C61DD7E1E26058F007BCB2D /* iComponents */;
-			targetProxy = 8C79A7101E48852300907D21 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -508,7 +642,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6S3AL87NGN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -520,8 +656,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.iComponents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.createappV2.CreateAppAsiaStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -533,7 +670,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6S3AL87NGN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -545,8 +684,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.iComponents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.createappV2.CreateAppAsiaStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -598,12 +738,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Technopreneur's Resource Centre Private Limited (5Z3E4245V4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6S3AL87NGN;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ranosys.iComponent-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.createappV2.AapKiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7d490afa-6709-4437-999f-b70aff201557";
+				PROVISIONING_PROFILE_SPECIFIER = AapkiAppDev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -613,12 +758,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Technopreneur's Resource Centre Private Limited (5Z3E4245V4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6S3AL87NGN;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "iComponent-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ranosys.iComponent-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.createappV2.AapKiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7d490afa-6709-4437-999f-b70aff201557";
+				PROVISIONING_PROFILE_SPECIFIER = AapkiAppDev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

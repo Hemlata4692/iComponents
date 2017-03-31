@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "a64920c75918c69b011051d06d588020"
+build_time: [543327216, 683715000]
+inputs:
+  "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/iComponents/ZoomInOut.swift": [9223372036854775807, 0]
+  "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/iComponents/iReachability.swift": [9223372036854775807, 0]
+  "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/iComponents/testinggg.swift": [9223372036854775807, 0]
+  "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/iComponents/FrontTutorial/TutorialView.swift": [9223372036854775807, 0]
+  "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/iComponents/iStringExtension.swift": [9223372036854775807, 0]
+  "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/iComponents/iCache.swift": [9223372036854775807, 0]
+  "/Users/ranosystechnologies/Desktop/iCOMPONENT/iComponents/iComponents/iTextfieldExtension.swift": [9223372036854775807, 0]
