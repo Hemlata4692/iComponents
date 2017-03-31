@@ -55,6 +55,11 @@
 		D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D2461E40B1E800D1371B /* iReachability.swift */; };
 		E0E8CF391E8E87690004068D /* GestureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF371E8E87690004068D /* GestureDetailViewController.swift */; };
 		E0E8CF3A1E8E87690004068D /* GestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF381E8E87690004068D /* GestureTableViewController.swift */; };
+		E0E8CF3D1E8E8D590004068D /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF3C1E8E8D590004068D /* ImageCropperViewController.swift */; };
+		E0E8CF431E8E8D680004068D /* iImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF3F1E8E8D680004068D /* iImagePickerController.swift */; };
+		E0E8CF441E8E8D680004068D /* KACircleCropCutterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF401E8E8D680004068D /* KACircleCropCutterView.swift */; };
+		E0E8CF451E8E8D680004068D /* KACircleCropScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF411E8E8D680004068D /* KACircleCropScrollView.swift */; };
+		E0E8CF461E8E8D680004068D /* KACircleCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CF421E8E8D680004068D /* KACircleCropViewController.swift */; };
 		E0E948A71E4AED0C004FE734 /* GesturAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +131,11 @@
 		D0F9D2461E40B1E800D1371B /* iReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iReachability.swift; sourceTree = "<group>"; };
 		E0E8CF371E8E87690004068D /* GestureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDetailViewController.swift; sourceTree = "<group>"; };
 		E0E8CF381E8E87690004068D /* GestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewController.swift; sourceTree = "<group>"; };
+		E0E8CF3C1E8E8D590004068D /* ImageCropperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperViewController.swift; sourceTree = "<group>"; };
+		E0E8CF3F1E8E8D680004068D /* iImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iImagePickerController.swift; sourceTree = "<group>"; };
+		E0E8CF401E8E8D680004068D /* KACircleCropCutterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropCutterView.swift; sourceTree = "<group>"; };
+		E0E8CF411E8E8D680004068D /* KACircleCropScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropScrollView.swift; sourceTree = "<group>"; };
+		E0E8CF421E8E8D680004068D /* KACircleCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropViewController.swift; sourceTree = "<group>"; };
 		E0E948A61E4AED0C004FE734 /* GesturAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +201,7 @@
 		747375A61E7FDA6F000D0743 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0E8CF3B1E8E8D590004068D /* ImageCropperController */,
 				E0E8CF361E8E87690004068D /* GestureAnimation */,
 				747375A71E7FDAC4000D0743 /* iComponentsViewController.swift */,
 				691861861E86507800963D1F /* Rtpl_ImageresizeViewController */,
@@ -260,6 +271,7 @@
 		8C61DD811E26058F007BCB2D /* iComponents */ = {
 			isa = PBXGroup;
 			children = (
+				E0E8CF3E1E8E8D680004068D /* ImageCropper */,
 				6918617F1E864D1300963D1F /* RtplTextViewPlaceHolderClass.swift */,
 				D05F609D1E8E69540024FF4A /* ICToastView */,
 				7412F35F1E84120D009D8382 /* CustomLogger */,
@@ -317,6 +329,25 @@
 				E0E8CF381E8E87690004068D /* GestureTableViewController.swift */,
 			);
 			path = GestureAnimation;
+			sourceTree = "<group>";
+		};
+		E0E8CF3B1E8E8D590004068D /* ImageCropperController */ = {
+			isa = PBXGroup;
+			children = (
+				E0E8CF3C1E8E8D590004068D /* ImageCropperViewController.swift */,
+			);
+			path = ImageCropperController;
+			sourceTree = "<group>";
+		};
+		E0E8CF3E1E8E8D680004068D /* ImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				E0E8CF3F1E8E8D680004068D /* iImagePickerController.swift */,
+				E0E8CF401E8E8D680004068D /* KACircleCropCutterView.swift */,
+				E0E8CF411E8E8D680004068D /* KACircleCropScrollView.swift */,
+				E0E8CF421E8E8D680004068D /* KACircleCropViewController.swift */,
+			);
+			path = ImageCropper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,10 +529,14 @@
 				7412F3611E84120D009D8382 /* NSLog+Debug.swift in Sources */,
 				15E26AFC1E6D83D9007E8471 /* ZoomInOut.swift in Sources */,
 				15C9C7671E8BE1DB0006A1D4 /* CustomActivityIndicatorView.swift in Sources */,
+				E0E8CF431E8E8D680004068D /* iImagePickerController.swift in Sources */,
 				D0F9D2471E40B1E800D1371B /* iReachability.swift in Sources */,
+				E0E8CF451E8E8D680004068D /* KACircleCropScrollView.swift in Sources */,
 				A677B9FB1E7BEEB0003D120D /* iStringExtension.swift in Sources */,
 				8C61DDA01E260CD2007BCB2D /* iCache.swift in Sources */,
+				E0E8CF441E8E8D680004068D /* KACircleCropCutterView.swift in Sources */,
 				E0E948A71E4AED0C004FE734 /* GesturAnimation.swift in Sources */,
+				E0E8CF461E8E8D680004068D /* KACircleCropViewController.swift in Sources */,
 				D05F609F1E8E69540024FF4A /* ICToastView.swift in Sources */,
 				A677B9FC1E7BEEB0003D120D /* iTextfieldExtension.swift in Sources */,
 				15F2B31E1E88C4E600650ABD /* ILocationPermission.swift in Sources */,
@@ -529,6 +564,7 @@
 				E0E8CF3A1E8E87690004068D /* GestureTableViewController.swift in Sources */,
 				747375A81E7FDAC4000D0743 /* iComponentsViewController.swift in Sources */,
 				8C79A6FF1E48851B00907D21 /* AppDelegate.swift in Sources */,
+				E0E8CF3D1E8E8D590004068D /* ImageCropperViewController.swift in Sources */,
 				E0E8CF391E8E87690004068D /* GestureDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
