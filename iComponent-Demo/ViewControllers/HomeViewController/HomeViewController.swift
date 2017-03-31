@@ -101,14 +101,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if Reachability.sharedInstance.isReachable {
             title = "Network Connection"
-            message = "Your have already connected to the network."
+            message = "You have already connected to the network."
         } else {
             title = "No Network Connection"
             message = "Please connect to some network and try again."
         }
-        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        showToast(message: message, withDuration: 5.0)
     }
     
     func generateCrashLogs() {
